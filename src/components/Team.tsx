@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
 
 export default function Team() {
-  const team = [
+  const clinicalTeam = [
     {
       name: "Dra. Flávia Freitas",
       role: "Diretora Clínica & Especialista",
@@ -39,6 +39,9 @@ export default function Team() {
       image: "/input_file_5.png",
       specialty: "Cirurgia & Implantodontia",
     },
+  ];
+
+  const supportStaff = [
     {
       name: "Patrícia Natália",
       role: "Auxiliar",
@@ -70,8 +73,8 @@ export default function Team() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {team.map((member, index) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-32">
+          {clinicalTeam.map((member, index) => (
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 30 }}
@@ -107,14 +110,36 @@ export default function Team() {
         </div>
 
 
-        <div className="mt-24 text-center">
-          <p className="display text-[10px] font-bold tracking-[0.2em] text-brand-ink/30 mb-8 uppercase">Apoio não Clínico</p>
-          <div className="flex flex-wrap justify-center gap-4 opacity-50 grayscale">
-            {/* These could be other staff members or small avatar circles */}
-            {[1,2,3,4,5].map(i => (
-              <div key={i} className="w-16 h-16 rounded-full border border-brand-ink/20 flex items-center justify-center text-brand-ink/20 serif italic">
-                PDI
-              </div>
+        <div className="pt-24 border-t border-white/5">
+          <div className="text-center mb-16">
+            <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent mb-4 uppercase">Apoio não Clínico</p>
+            <h3 className="serif text-4xl text-white italic">A base da nossa excelência.</h3>
+          </div>
+          
+          <div className="grid sm:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            {supportStaff.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className="flex items-center gap-8 bg-white/[0.02] p-8 border border-white/5 group hover:border-brand-accent/30 transition-colors"
+              >
+                <div className="w-32 h-32 shrink-0 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <div>
+                  <h4 className="serif text-2xl text-white mb-1">{member.name}</h4>
+                  <p className="display text-[10px] font-bold tracking-widest text-brand-accent uppercase mb-2">{member.role}</p>
+                  <p className="text-slate-500 text-[10px] uppercase tracking-wider italic">{member.specialty}</p>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>

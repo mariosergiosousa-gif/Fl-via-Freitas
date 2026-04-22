@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden bg-brand-paper">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-brand-paper py-24">
       {/* Background Decor - Radial Gradient from Theme */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,_rgba(197,160,89,0.08),transparent_70%)]" />
       
@@ -24,7 +24,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.95] text-white mb-10 tracking-tighter"
+            className="serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] text-white mb-10 tracking-tighter"
           >
             Odontologia de <br />
             <span className="italic text-brand-accent">Alta Performance.</span>
@@ -74,7 +74,7 @@ export default function Hero() {
             </div>
 
             {/* Vertical Rail Text */}
-            <div className="absolute -left-12 top-1/2 -translate-y-1/2 flex flex-col items-center">
+            <div className="absolute -right-12 top-1/2 -translate-y-1/2 flex flex-col items-center">
               <span className="vertical-text text-[10px] font-bold tracking-[0.5em] text-brand-accent/30 whitespace-nowrap uppercase">
                 HOF • IMPLANTODONTIA • ORTODONTIA • ODONTOPEDIATRIA
               </span>
