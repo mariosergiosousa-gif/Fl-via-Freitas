@@ -1,37 +1,69 @@
 import { motion } from 'motion/react';
-import { Activity, ShieldCheck, Heart, Sparkles, MapPin, Layers } from 'lucide-react';
+import { 
+  Activity, 
+  ShieldCheck, 
+  Heart, 
+  Sparkles, 
+  GraduationCap, 
+  Layers, 
+  Baby, 
+  Shapes, 
+  Zap, 
+  CheckCircle2,
+  Stethoscope
+} from 'lucide-react';
 
 export default function Services() {
   const treatments = [
     {
-      title: "Implantologia",
-      description: "Recupere a funcionalidade e estética do seu sorriso com implantes de última geração.",
-      icon: <Layers size={32} />,
-    },
-    {
-      title: "Reabilitação Oral",
-      description: "Tratamentos integrados para restaurar a saúde completa da sua boca.",
-      icon: <Activity size={32} />,
-    },
-    {
-      title: "Estética Dentária",
-      description: "Facetas, branqueamento e correções sutis para um sorriso radiante.",
-      icon: <Sparkles size={32} />,
+      title: "Odontopediatria",
+      description: "Cuidados gentis e especializados para o sorriso dos mais pequenos.",
+      icon: <Baby size={32} />,
     },
     {
       title: "Ortodontia",
-      description: "Aparelhos invisíveis e convencionais para um alinhamento perfeito.",
+      description: "Correção e alinhamento do sorriso para todas as idades.",
       icon: <ShieldCheck size={32} />,
     },
     {
-      title: "Periodontologia",
-      description: "Cuidado especializado com as gengivas e tecidos de suporte dos dentes.",
+      title: "Clínica Geral",
+      description: "Prevenção e cuidados fundamentais para a saúde oral diária.",
+      icon: <CheckCircle2 size={32} />,
+    },
+    {
+      title: "Implantodontia",
+      description: "Soluções permanentes e seguras para a falta de dentes.",
+      icon: <Layers size={32} />,
+    },
+    {
+      title: "HOF",
+      description: "Equilíbrio estético e rejuvenescimento facial personalizado.",
+      icon: <Sparkles size={32} />,
+    },
+    {
+      title: "Cursos",
+      description: "Formação de alto nível e mentoria para profissionais da área.",
+      icon: <GraduationCap size={32} />,
+    },
+    {
+      title: "Cirurgia e Traumatologia",
+      description: "Intervenções buco-maxilo-faciais avançadas e precisão cirúrgica.",
+      icon: <Activity size={32} />,
+    },
+    {
+      title: "Prótese",
+      description: "Restauração da função e estética com próteses de alta qualidade.",
+      icon: <Shapes size={32} />,
+    },
+    {
+      title: "Periodontia",
+      description: "Tratamento especializado das gengivas e tecidos de suporte.",
       icon: <Heart size={32} />,
     },
     {
-      title: "Turismo Dentário",
-      description: "Soluções completas para pacientes internacionais que visitam o Porto.",
-      icon: <MapPin size={32} />,
+      title: "Endodontia",
+      description: "Tratamentos de canal com precisão digital e mínimo desconforto.",
+      icon: <Zap size={32} />,
     },
   ];
 

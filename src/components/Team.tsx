@@ -6,20 +6,38 @@ export default function Team() {
     {
       name: "Dra. Flávia Freitas",
       role: "Diretora Clínica & Especialista",
-      image: "https://images.unsplash.com/photo-1559839734-2b71f1536783?q=80&w=2070&auto=format&fit=crop",
+      image: "/input_file_0.png",
+      specialty: "Endodontia & Reabilitação Oral",
+    },
+    {
+      name: "Dra. Diana Castro",
+      role: "Especialista em Ortodontia",
+      image: "/input_file_1.png",
+      specialty: "Ortodontia & Estética",
+    },
+    {
+      name: "Dra. Letícia Sousa",
+      role: "Atendimento à Criança e Prevenção",
+      image: "/input_file_2.png",
+      specialty: "Odontopediatria & Prevenção",
+    },
+    {
+      name: "Dra. Bruna Almeida",
+      role: "Especialista em Periodontia",
+      image: "/input_file_3.png",
+      specialty: "Periodontia",
+    },
+    {
+      name: "Dra. Erika Braga",
+      role: "Prótese e Dentística",
+      image: "/input_file_4.png",
       specialty: "Reabilitação Oral & Estética",
     },
     {
-      name: "Dra. Juliana Mendes",
-      role: "Ortodontia & Harmonização",
-      image: "https://images.unsplash.com/photo-1594824476967-31968ed761d7?q=80&w=2070&auto=format&fit=crop",
-      specialty: "Aparelhos Invisíveis",
-    },
-    {
-      name: "Dr. André Silva",
-      role: "Implantodontista",
-      image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=2070&auto=format&fit=crop",
-      specialty: "Cirurgia Guiada",
+      name: "Dra. Tamirys Teixeira",
+      role: "Cirurgiã e Implante",
+      image: "/input_file_5.png",
+      specialty: "Cirurgia & Implantodontia",
     },
   ];
 
@@ -36,11 +54,11 @@ export default function Team() {
           </h2>
           <div className="w-24 h-px bg-white/20 mx-auto mb-8" />
           <p className="text-slate-400 text-lg leading-relaxed font-light">
-            A nossa equipa reúne profissionais de renome, com vasta experiência clínica e académica, focados na excelência e no bem-estar de cada paciente.
+            A nossa equipa reúne profissionais de renome em Brumadinho, focados na excelência clínica e no bem-estar de cada paciente.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {team.map((member, index) => (
             <motion.div
               key={member.name}

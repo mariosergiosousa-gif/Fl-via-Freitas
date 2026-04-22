@@ -66,7 +66,7 @@ export default function Hero() {
             <div className="aspect-[4/5] overflow-hidden rounded-[200px] border-[12px] border-white/5 shadow-2xl relative">
               <img 
                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop" 
-                alt="Clínica Porto Dental" 
+                alt="Dra. Flávia Freitas" 
                 className="w-full h-full object-cover opacity-80"
                 referrerPolicy="no-referrer"
               />
@@ -76,7 +76,7 @@ export default function Hero() {
             {/* Vertical Rail Text */}
             <div className="absolute -left-12 top-1/2 -translate-y-1/2 flex flex-col items-center">
               <span className="vertical-text text-[10px] font-bold tracking-[0.5em] text-brand-accent/30 whitespace-nowrap uppercase">
-                ESTÉTICA • IMPLANTOLOGIA • ORTODONTIA
+                HOF • IMPLANTODONTIA • ORTODONTIA • ODONTOPEDIATRIA
               </span>
             </div>
 
