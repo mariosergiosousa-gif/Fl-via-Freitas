@@ -15,7 +15,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'O INSTITUTO', href: '#sobre' },
+    { name: 'A CLÍNICA', href: '#sobre' },
     { name: 'TRATAMENTOS', href: '#tratamentos' },
     { name: 'FORMAÇÃO', href: '#formacao' },
     { name: 'EQUIPA', href: '#equipa' },
@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo Area */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 border-2 border-brand-accent flex items-center justify-center rotate-45">
+          <div className="w-8 h-8 border-2 border-brand-accent flex items-center justify-center rotate-45 shrink-0">
             <div className="-rotate-45 font-serif font-bold text-brand-accent">FF</div>
           </div>
           <div className="flex flex-col">
@@ -46,7 +46,7 @@ export default function Navbar() {
             <a 
               key={link.name}
               href={link.href}
-              className="text-[11px] font-semibold tracking-[0.2em] text-slate-400 hover:text-brand-accent transition-colors duration-200 uppercase"
+              className="text-[11px] font-semibold tracking-[0.2em] text-slate-400 hover:text-brand-accent transition-colors duration-200 uppercase whitespace-nowrap"
             >
               {link.name}
             </a>

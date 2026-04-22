@@ -39,6 +39,18 @@ export default function Team() {
       image: "/input_file_5.png",
       specialty: "Cirurgia & Implantodontia",
     },
+    {
+      name: "Patrícia Natália",
+      role: "Auxiliar",
+      image: "/input_file_6.png",
+      specialty: "Apoio Clínico",
+    },
+    {
+      name: "Lidiane Assis",
+      role: "Secretária",
+      image: "/input_file_7.png",
+      specialty: "Atendimento & Gestão",
+    },
   ];
 
   return (

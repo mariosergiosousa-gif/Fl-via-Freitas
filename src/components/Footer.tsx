@@ -20,7 +20,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase mb-10">Mavegação</h4>
+            <h4 className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase mb-10">Navegação</h4>
             <ul className="space-y-4">
               <li><a href="#sobre" className="text-xs hover:text-white transition-colors uppercase tracking-widest">O Instituto</a></li>
               <li><a href="#tratamentos" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Tratamentos</a></li>
