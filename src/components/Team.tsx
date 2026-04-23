@@ -30,7 +30,7 @@ export default function Team() {
     {
       name: "Dra. Erika Braga",
       role: "Prótese e Dentística",
-      image: "/input_file_4.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_3:4,c_fill,g_face,f_auto,q_auto/v1776966194/Erika_Braga_clzsqb.png",
       specialty: "Reabilitação Oral & Estética",
     },
     {
