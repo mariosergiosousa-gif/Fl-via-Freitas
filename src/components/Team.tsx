@@ -6,25 +6,25 @@ export default function Team() {
     {
       name: "Dra. Flávia Freitas",
       role: "Diretora Clínica & Especialista",
-      image: "/input_file_0.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_3:4,c_fill,g_face,f_auto,q_auto/v1776958804/Fl%C3%A1via_Freitas_nz6qr4.png",
       specialty: "Endodontia & Reabilitação Oral",
     },
     {
       name: "Dra. Diana Castro",
       role: "Especialista em Ortodontia",
-      image: "/input_file_1.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_3:4,c_fill,g_face,f_auto,q_auto/v1776954974/Diana_Castro_fwoo6c.png",
       specialty: "Ortodontia & Estética",
     },
     {
       name: "Dra. Letícia Sousa",
       role: "Atendimento à Criança e Prevenção",
-      image: "/input_file_2.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_3:4,c_fill,g_face,f_auto,q_auto/v1776965407/Let%C3%ADcia_Sousa_vt4iqi.png",
       specialty: "Odontopediatria & Prevenção",
     },
     {
       name: "Dra. Bruna Almeida",
       role: "Especialista em Periodontia",
-      image: "/input_file_3.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_3:4,c_fill,g_face,f_auto,q_auto/v1776955882/Bruna_Almeida_ga4uif.png",
       specialty: "Periodontia",
     },
     {
@@ -87,7 +87,7 @@ export default function Team() {
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-85 group-hover:opacity-100"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-brand-paper/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">

@@ -4,11 +4,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-16 mb-24">
           <div className="col-span-2">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-8 h-8 border-2 border-brand-accent flex items-center justify-center rotate-45">
-                <div className="-rotate-45 font-serif font-bold text-brand-accent">F</div>
-              </div>
-              <h2 className="display text-xl font-bold text-white tracking-widest uppercase">FLÁVIA FREITAS</h2>
+            <div className="mb-8 flex flex-col leading-[1.1] items-center md:items-start text-center md:text-left">
+              <span className="serif italic text-[13px] tracking-[0.2em] text-brand-accent uppercase">Excelência em</span>
+              <span className="serif italic text-[13px] tracking-[0.2em] text-brand-accent uppercase">Odontologia</span>
             </div>
             <p className="max-w-md text-sm leading-relaxed mb-10 font-light text-slate-400">
               Excelência clínica e odontologia de alta performance em Brumadinho. Transformamos sorrisos através de tecnologia de precisão e cuidado humano de classe mundial.
@@ -22,7 +20,7 @@ export default function Footer() {
           <div>
             <h4 className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase mb-10">Navegação</h4>
             <ul className="space-y-4">
-              <li><a href="#sobre" className="text-xs hover:text-white transition-colors uppercase tracking-widest">O Instituto</a></li>
+              <li><a href="#sobre" className="text-xs hover:text-white transition-colors uppercase tracking-widest">A Clínica</a></li>
               <li><a href="#tratamentos" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Tratamentos</a></li>
               <li><a href="#equipa" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Corpo Clínico</a></li>
             </ul>

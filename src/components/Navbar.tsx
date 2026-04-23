@@ -31,18 +31,15 @@ export default function Navbar() {
         {/* Logo Area */}
         <a 
           href="#" 
-          className="flex items-center gap-3 group cursor-pointer"
+          className="group cursor-pointer block"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          <div className="w-8 h-8 border-2 border-brand-accent flex items-center justify-center rotate-45 shrink-0 group-hover:bg-brand-accent transition-all duration-300">
-            <div className="-rotate-45 font-serif font-bold text-brand-accent group-hover:text-black transition-colors">FF</div>
-          </div>
-          <div className="flex flex-col">
-            <span className="display font-semibold text-lg tracking-wider text-white uppercase group-hover:text-brand-accent transition-colors">FLÁVIA FREITAS</span>
-            <span className="serif text-xs italic opacity-70 tracking-[0.2em] -mt-1 text-brand-accent uppercase">Excelência em Odontologia</span>
+          <div className="flex flex-col leading-[1.1] text-center items-center">
+            <span className="serif italic text-[13px] tracking-[0.2em] text-brand-accent uppercase group-hover:text-white transition-colors duration-300">Excelência em</span>
+            <span className="serif italic text-[13px] tracking-[0.2em] text-brand-accent uppercase group-hover:text-white transition-colors duration-300">Odontologia</span>
           </div>
         </a>
 
