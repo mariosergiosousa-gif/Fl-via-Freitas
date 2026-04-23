@@ -17,6 +17,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'A CLÍNICA', href: '#sobre' },
     { name: 'TRATAMENTOS', href: '#tratamentos' },
+    { name: 'O NOSSO ESPAÇO', href: '#espaco' },
     { name: 'EQUIPA', href: '#equipa' },
     { name: 'CONTACTOS', href: '#contactos' },
   ];
@@ -37,13 +38,13 @@ export default function Navbar() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          <div className="flex flex-col leading-[1.1] text-center items-center">
-            <span className="serif italic text-[13px] tracking-[0.2em] text-brand-accent uppercase group-hover:text-white transition-colors duration-300">Excelência em</span>
-            <span className="serif italic text-[13px] tracking-[0.2em] text-brand-accent uppercase group-hover:text-white transition-colors duration-300">Odontologia</span>
+          <div className="flex flex-col leading-none text-center items-center">
+            <span className="display text-[9px] tracking-[0.4em] text-brand-accent uppercase mb-1.5 opacity-90 group-hover:opacity-100 transition-opacity duration-300">Excelência em</span>
+            <span className="serif italic text-[20px] md:text-[26px] tracking-wide text-white group-hover:text-brand-accent transition-colors duration-300">Odontologia</span>
           </div>
         </a>
 
-        <div className="hidden md:flex items-center space-x-12">
+        <div className="hidden md:flex items-center space-x-10">
           {navLinks.map((link) => (
             <a 
               key={link.name}

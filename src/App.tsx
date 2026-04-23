@@ -3,14 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Team from './components/Team';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import InstagramEmbed from './components/InstagramEmbed';
+import { motion, AnimatePresence } from 'motion/react';
+import { X } from 'lucide-react';
 
 export default function App() {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -51,12 +57,21 @@ export default function App() {
         <Team />
         
         {/* Space Gallery */}
-        <section className="py-32 bg-[#050608] overflow-hidden border-t border-white/10">
+        <section id="espaco" className="py-32 bg-[#050608] overflow-hidden border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6 mb-16">
             <span className="display text-[10px] font-bold tracking-[0.5em] text-brand-accent mb-6 block uppercase">
                O Nosso Espaço
             </span>
-            <h2 className="serif text-4xl md:text-6xl text-white italic">Onde a tecnologia <span className="text-brand-accent">encontra o conforto.</span></h2>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+              <h2 className="serif text-4xl md:text-6xl text-white italic max-w-2xl">Onde a tecnologia <span className="text-brand-accent">encontra o conforto.</span></h2>
+              <button 
+                onClick={() => setIsVideoModalOpen(true)}
+                className="inline-flex items-center gap-3 bg-brand-accent text-black px-8 py-4 rounded-none text-[10px] font-bold tracking-[0.3em] hover:bg-white transition-all uppercase whitespace-nowrap self-start md:self-auto cursor-pointer"
+              >
+                <span>Ver Vídeo Tour</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-black animate-pulse" />
+              </button>
+            </div>
           </div>
           <div className="flex gap-8 px-6 overflow-x-auto pb-12 no-scrollbar">
             {[1,2,3,4,5].map(i => (
@@ -76,6 +91,38 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+
+      {/* Video Tour Modal */}
+      <AnimatePresence>
+        {isVideoModalOpen && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsVideoModalOpen(false)}
+              className="absolute inset-0 bg-black/95 backdrop-blur-xl"
+            />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className="relative w-full max-w-sm md:max-w-md overflow-hidden rounded-xl"
+            >
+              <button 
+                onClick={() => setIsVideoModalOpen(false)}
+                className="absolute top-2 right-2 z-20 bg-black/50 text-white rounded-full p-2 hover:bg-black transition-colors"
+                aria-label="Fechar modal"
+              >
+                <X size={20} />
+              </button>
+              <div className="overflow-hidden">
+                <InstagramEmbed url="https://www.instagram.com/reel/DNDtXwIxVI3/" />
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
