@@ -24,7 +24,6 @@ export default function Footer() {
             <ul className="space-y-4">
               <li><a href="#sobre" className="text-xs hover:text-white transition-colors uppercase tracking-widest">O Instituto</a></li>
               <li><a href="#tratamentos" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Tratamentos</a></li>
-              <li><a href="#formacao" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Formação</a></li>
               <li><a href="#equipa" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Corpo Clínico</a></li>
             </ul>
           </div>

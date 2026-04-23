@@ -41,11 +41,6 @@ export default function Services() {
       icon: <Sparkles size={32} />,
     },
     {
-      title: "Cursos",
-      description: "Formação de alto nível e mentoria para profissionais da área.",
-      icon: <GraduationCap size={32} />,
-    },
-    {
       title: "Cirurgia e Traumatologia",
       description: "Intervenções buco-maxilo-faciais avançadas e precisão cirúrgica.",
       icon: <Activity size={32} />,

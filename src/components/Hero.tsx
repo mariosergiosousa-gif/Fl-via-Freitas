@@ -45,11 +45,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-wrap gap-6"
           >
-            <a href="#contactos" className="bg-brand-accent text-black px-10 py-5 rounded-none text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-lg">
+            <a href="#contactos" className="bg-brand-accent text-black px-12 py-5 rounded-none text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-lg">
               MARCAR CONSULTA
-            </a>
-            <a href="#formacao" className="border border-white/20 px-10 py-5 rounded-none text-xs font-bold uppercase tracking-widest text-white hover:bg-white/5 transition-all">
-              VER FORMAÇÕES
             </a>
           </motion.div>
         </div>

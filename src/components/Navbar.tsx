@@ -17,7 +17,6 @@ export default function Navbar() {
   const navLinks = [
     { name: 'A CLÍNICA', href: '#sobre' },
     { name: 'TRATAMENTOS', href: '#tratamentos' },
-    { name: 'FORMAÇÃO', href: '#formacao' },
     { name: 'EQUIPA', href: '#equipa' },
     { name: 'CONTACTOS', href: '#contactos' },
   ];
@@ -47,13 +46,12 @@ export default function Navbar() {
           </div>
         </a>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-10">
+        <div className="hidden md:flex items-center space-x-12">
           {navLinks.map((link) => (
             <a 
               key={link.name}
               href={link.href}
-              className="text-[11px] font-semibold tracking-[0.2em] text-slate-400 hover:text-brand-accent transition-colors duration-200 uppercase whitespace-nowrap"
+              className="text-[11px] font-bold tracking-[0.3em] text-white/50 hover:text-brand-accent transition-all duration-300 uppercase whitespace-nowrap"
             >
               {link.name}
             </a>
