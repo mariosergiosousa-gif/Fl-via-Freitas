@@ -12,7 +12,7 @@ export default function InstagramEmbed({ url }: InstagramEmbedProps) {
       <iframe
         src={embedUrl}
         className="w-full h-full border-0 rounded-lg shadow-2xl"
-        allowTransparency={true}
+        allowtransparency="true"
         allow="encrypted-media"
         frameBorder="0"
         scrolling="no"

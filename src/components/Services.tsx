@@ -63,49 +63,52 @@ export default function Services() {
   ];
 
   return (
-    <section id="tratamentos" className="py-32 bg-brand-paper border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+    <section id="tratamentos" className="relative py-24 md:py-32 bg-brand-paper border-t border-white/10 overflow-hidden">
+      {/* Decorative Dots Pattern */}
+      <div className="absolute top-0 right-0 w-64 h-64 dots-pattern opacity-10 -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 dots-pattern opacity-5 translate-y-1/2 -translate-x-1/2" />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 md:mb-24 gap-8 text-center md:text-left">
           <div className="max-w-2xl">
-            <span className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent mb-4 block uppercase leading-snug">
-              Nossos Serviços
-            </span>
-            <h2 className="serif text-5xl md:text-7xl text-white mb-6">
-              Soluções à medida do <br />
-              <span className="italic text-brand-accent">seu sorriso.</span>
+            <h2 className="serif text-4xl sm:text-5xl md:text-7xl text-white mb-6 uppercase italic leading-[1.1]">
+              Excelência <br className="hidden md:block" />
+              <span className="text-brand-accent">Personalizada.</span>
             </h2>
-            <p className="text-slate-400 text-lg font-light">
-              Oferecemos uma gama completa de tratamentos especializados, combinando arte e ciência para resultados excecionais.
+            <p className="text-slate-400 text-base md:text-lg font-light leading-relaxed max-w-lg mx-auto md:mx-0">
+              Combinamos arte, ciência e a tecnologia mais avançada para criar resultados que superam expectativas.
             </p>
           </div>
-          <div className="hidden lg:block relative text-white/5">
-            <span className="display text-9xl font-black italic tracking-tighter">ESTÉTICA</span>
+          <div className="hidden lg:block relative text-white/5 select-none">
+            <span className="display text-[14vw] font-black italic tracking-tighter absolute -right-24 bottom-0 whitespace-nowrap">PREVENÇÃO</span>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 border-t border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-white/10">
           {treatments.map((item, index) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group p-12 border-b border-r border-white/5 last:border-r-0 lg:even:border-r lg:odd:border-r lg:[&:nth-child(3n)]:border-r-0 hover:bg-white/[0.02] transition-colors duration-500 flex flex-col items-start"
+              transition={{ delay: index * 0.05 }}
+              className="group p-8 md:p-12 border-b border-white/5 sm:border-r hover:bg-brand-accent/[0.03] transition-all duration-500 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden"
             >
-              <div className="text-brand-accent mb-8 opacity-60 group-hover:opacity-100 transition-opacity">
+              <div className="text-brand-accent mb-6 md:mb-8 opacity-60 group-hover:opacity-100 transition-opacity transform group-hover:scale-110 duration-500">
                 {item.icon}
               </div>
-              <h3 className="serif text-3xl mb-4 text-white group-hover:text-brand-accent transition-colors">
+              <h3 className="serif text-2xl md:text-3xl mb-4 text-white group-hover:text-brand-accent transition-colors uppercase font-medium">
                 {item.title}
               </h3>
-              <p className="text-slate-500 leading-relaxed mb-8 font-light italic">
+              <p className="text-slate-500 leading-relaxed mb-8 font-light italic text-sm md:text-base">
                 {item.description}
               </p>
               <a href="#contactos" className="text-[10px] font-bold tracking-[0.3em] text-brand-accent uppercase mt-auto flex items-center gap-2 hover:text-white transition-colors">
-                <span>CONSULTAR ESPECIALIDADE</span>
-                <span className="w-8 h-[1px] bg-brand-accent/30 group-hover:bg-white transition-colors" />
+                <span>SAIBA MAIS</span>
+                <span className="w-8 h-[1px] bg-brand-accent/30 group-hover:bg-white transition-all group-hover:w-12" />
               </a>
+              {/* Corner accent for group hover */}
+              <div className="absolute top-0 right-0 w-2 h-2 bg-brand-accent/0 group-hover:bg-brand-accent transition-all duration-500" />
             </motion.div>
           ))}
         </div>

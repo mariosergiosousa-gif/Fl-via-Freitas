@@ -4,19 +4,29 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Cormorant Garamond", serif;
-  --font-display: "Montserrat", sans-serif;
+  --font-display: " Montserrat", sans-serif;
   
-  --color-brand-paper: #0A0C10; /* Deep dark background */
-  --color-brand-ink: #E2E8F0;    /* Soft white/slate text */
-  --color-brand-accent: #C5A059; /* Sophisticated gold */
-  --color-brand-muted: #64748B;  /* Slate-500 for secondary text */
-  --color-brand-border: rgba(255, 255, 255, 0.1);
+  --color-brand-paper: #050608; 
+  --color-brand-ink: #F9FAFB;    
+  --color-brand-accent: #E88B67; /* New Coral tone from your images */
+  --color-brand-muted: #94A3B8;  
+  --color-brand-border: rgba(255, 255, 255, 0.08);
 }
 
 @layer base {
   body {
     @apply bg-brand-paper text-brand-ink font-sans antialiased selection:bg-brand-accent selection:text-black;
   }
+}
+
+.fluid-mask {
+  mask-image: radial-gradient(circle at center, black, transparent);
+  border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+}
+
+.dots-pattern {
+  background-image: radial-gradient(rgba(232, 139, 103, 0.3) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
 }
 
 .serif {

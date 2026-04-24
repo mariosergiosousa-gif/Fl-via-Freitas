@@ -15,11 +15,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'A CLÍNICA', href: '#sobre' },
     { name: 'TRATAMENTOS', href: '#tratamentos' },
-    { name: 'O NOSSO ESPAÇO', href: '#espaco' },
-    { name: 'EQUIPA', href: '#equipa' },
-    { name: 'CONTACTOS', href: '#contactos' },
+    { name: 'CORPO CLÍNICO', href: '#equipe' },
+    { name: 'O NOSSO ESPAÇO', href: '#o-nosso-espaco' },
+    { name: 'ONDE ESTAMOS', href: '#onde-estamos' },
   ];
 
   return (
@@ -38,25 +37,27 @@ export default function Navbar() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          <div className="flex flex-col leading-none text-center items-center">
-            <span className="display text-[9px] tracking-[0.4em] text-brand-accent uppercase mb-1.5 opacity-90 group-hover:opacity-100 transition-opacity duration-300">Excelência em</span>
-            <span className="serif italic text-[20px] md:text-[26px] tracking-wide text-white group-hover:text-brand-accent transition-colors duration-300">Odontologia</span>
+          <div className="flex flex-col leading-[0.9] text-left">
+            <span className="serif text-[20px] md:text-[24px] font-bold text-brand-accent tracking-tighter uppercase">Excelência em</span>
+            <span className="serif text-[20px] md:text-[24px] font-bold text-brand-accent tracking-tighter uppercase">Odontologia</span>
           </div>
         </a>
 
-        <div className="hidden md:flex items-center space-x-10">
+        <div className="hidden md:flex items-center space-x-8 lg:space-x-12">
           {navLinks.map((link) => (
             <a 
               key={link.name}
               href={link.href}
-              className="text-[11px] font-bold tracking-[0.3em] text-white/50 hover:text-brand-accent transition-all duration-300 uppercase whitespace-nowrap"
+              className="text-[11px] font-bold tracking-[0.3em] text-white/70 hover:text-brand-accent transition-all duration-300 uppercase whitespace-nowrap"
             >
               {link.name}
             </a>
           ))}
           <a 
-            href="#contactos"
-            className="flex items-center space-x-2 bg-brand-accent text-black px-6 py-2.5 rounded-none text-[10px] font-bold tracking-[0.2em] hover:bg-white transition-colors"
+            href="https://wa.me/5531999245130"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 bg-brand-accent text-black px-6 py-3 rounded-none text-[10px] font-bold tracking-[0.2em] hover:bg-white transition-colors"
           >
             <Phone size={14} />
             <span>AGENDAR</span>
@@ -66,7 +67,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden text-brand-ink p-2"
+          className="md:hidden text-brand-accent p-2 border border-brand-accent/20"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -77,26 +78,38 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-brand-paper shadow-xl md:hidden border-t border-brand-ink/5"
+            initial={{ opacity: 0, y: -20, height: 0 }}
+            animate={{ opacity: 1, y: 0, height: 'auto' }}
+            exit={{ opacity: 0, y: -20, height: 0 }}
+            className="absolute top-full left-0 right-0 bg-brand-paper shadow-2xl md:hidden border-t border-brand-accent/10 overflow-hidden"
           >
-            <div className="flex flex-col p-8 space-y-6">
+            <div className="flex flex-col p-10 space-y-8 bg-[#0a0c10]">
               {navLinks.map((link) => (
-                <a 
+                <motion.a 
                   key={link.name}
                   href={link.href}
-                  className="text-sm font-medium tracking-widest text-brand-ink hover:text-brand-accent"
+                  className="text-lg font-bold tracking-[0.2em] text-brand-ink/90 hover:text-brand-accent border-l-2 border-transparent hover:border-brand-accent pl-4 transition-all uppercase"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
-                </a>
+                </motion.a>
               ))}
-              <div className="pt-6 border-t border-brand-ink/5 flex justify-center space-x-6">
-                <Instagram size={20} className="text-brand-ink/60" />
-                <Linkedin size={20} className="text-brand-ink/60" />
-                <Facebook size={20} className="text-brand-ink/60" />
+              <div className="pt-8 border-t border-white/5 flex flex-col gap-6">
+                <a 
+                  href="https://wa.me/5531999245130"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-center space-x-3 bg-brand-accent text-black px-8 py-5 rounded-none text-xs font-bold tracking-[0.2em] uppercase"
+                >
+                  <Phone size={18} />
+                  <span>AGENDAR ESPECIALISTA</span>
+                </a>
+                <div className="flex justify-center space-x-8">
+                  <Instagram size={24} className="text-brand-ink/40 hover:text-brand-accent transition-colors" />
+                  <Linkedin size={24} className="text-brand-ink/40 hover:text-brand-accent transition-colors" />
+                  <Facebook size={24} className="text-brand-ink/40 hover:text-brand-accent transition-colors" />
+                </div>
               </div>
             </div>
           </motion.div>

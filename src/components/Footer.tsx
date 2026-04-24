@@ -9,20 +9,17 @@ export default function Footer() {
               <span className="serif italic text-[13px] tracking-[0.2em] text-brand-accent uppercase">Odontologia</span>
             </div>
             <p className="max-w-md text-sm leading-relaxed mb-10 font-light text-slate-400">
-              Excelência clínica e odontologia de alta performance em Brumadinho. Transformamos sorrisos através de tecnologia de precisão e cuidado humano de classe mundial.
+              Transformando sorrisos, promovendo saúde bucal e a melhoria da autoestima!
             </p>
-            <div className="flex items-center gap-3">
-               <span className="w-2 h-2 rounded-full bg-brand-accent shadow-[0_0_12px_rgba(197,160,89,0.8)] animate-pulse" />
-               <span className="text-[10px] font-bold tracking-[0.3em] text-white uppercase italic">Standard of Excellence</span>
-            </div>
           </div>
           
           <div>
             <h4 className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase mb-10">Navegação</h4>
             <ul className="space-y-4">
-              <li><a href="#sobre" className="text-xs hover:text-white transition-colors uppercase tracking-widest">A Clínica</a></li>
+              <li><a href="#o-nosso-espaco" className="text-xs hover:text-white transition-colors uppercase tracking-widest">O Nosso Espaço</a></li>
               <li><a href="#tratamentos" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Tratamentos</a></li>
-              <li><a href="#equipa" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Corpo Clínico</a></li>
+              <li><a href="#equipe" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Corpo Clínico</a></li>
+              <li><a href="#onde-estamos" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Onde Estamos</a></li>
             </ul>
           </div>
 
@@ -31,19 +28,17 @@ export default function Footer() {
             <ul className="space-y-4">
               <li><a href="#" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Privacidade</a></li>
               <li><a href="#" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Termos</a></li>
-              <li><a href="#" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Livro Reclamações</a></li>
-              <li><a href="#" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Contactos</a></li>
             </ul>
           </div>
         </div>
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-slate-600">
-            © {new Date().getFullYear()} FLÁVIA FREITAS. Brumadinho, MG.
+            @ 2026 excelência em odontologia. brumadinho,mg.
           </p>
           <div className="flex gap-10">
-            <span className="text-[10px] font-bold tracking-[0.4em] uppercase hover:text-white transition-colors cursor-pointer">INSTAGRAM</span>
-            <span className="text-[10px] font-bold tracking-[0.4em] uppercase hover:text-white transition-colors cursor-pointer">WHATSAPP</span>
+            <a href="https://www.instagram.com/excelenciaemodontologia8/" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold tracking-[0.4em] uppercase hover:text-white transition-colors cursor-pointer">INSTAGRAM</a>
+            <a href="https://wa.me/5531999245130" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold tracking-[0.4em] uppercase hover:text-white transition-colors cursor-pointer">WHATSAPP</a>
             <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-accent">EXCELÊNCIA</span>
           </div>
         </div>
