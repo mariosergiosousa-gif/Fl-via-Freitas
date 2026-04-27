@@ -58,23 +58,23 @@ export default function Team() {
 
   return (
     <section id="equipe" className="relative py-24 md:py-32 bg-brand-paper border-t border-white/10 overflow-hidden">
+      {/* Background Text Overlay */}
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 pointer-events-none select-none z-0">
+        <span className="serif text-[22vw] font-black uppercase italic text-white/[0.02] leading-none whitespace-nowrap tracking-tighter block">
+          Dentistas
+        </span>
+      </div>
+
       {/* Decorative Elements */}
       <div className="absolute top-1/4 left-0 w-32 h-32 dots-pattern opacity-10" />
       <div className="absolute bottom-1/4 right-0 w-32 h-32 dots-pattern opacity-10" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-left mb-16 md:mb-24 max-w-3xl px-4 md:px-0 relative">
-          {/* Background Text Overlay - Positioned behind heading */}
-          <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-4 md:-translate-x-12 pointer-events-none select-none -z-10">
-            <span className="serif text-[20vw] md:text-[18vw] font-black uppercase italic text-white/[0.03] leading-none whitespace-nowrap tracking-tighter block">
-              Dentistas
-            </span>
-          </div>
-
-          <h2 className="serif text-4xl sm:text-5xl md:text-7xl text-white mb-4 uppercase italic leading-tight text-left relative z-10">
+        <div className="text-left mb-16 md:mb-24 max-w-3xl px-4 md:px-0">
+          <h2 className="serif text-4xl sm:text-5xl md:text-7xl text-white mb-4 uppercase italic leading-tight text-left">
             Corpo <span className="text-brand-accent">Clínico.</span>
           </h2>
-          <p className="text-slate-400 text-base md:text-lg leading-relaxed font-light relative z-10">
+          <p className="text-slate-400 text-base md:text-lg leading-relaxed font-light">
             A nossa equipe reúne profissionais dedicados à excelência clínica, unindo conhecimento e tecnologia para transformar o seu sorriso.
           </p>
         </div>
