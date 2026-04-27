@@ -71,8 +71,16 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 md:mb-24 gap-8 text-center md:text-left">
           <div className="max-w-2xl">
+            <h2 className="serif text-4xl sm:text-5xl md:text-7xl text-white mb-6 uppercase italic leading-[1.1]">
+              Excelência <br className="hidden md:block" />
+              <span className="text-brand-accent">Personalizada.</span>
+            </h2>
+            <p className="text-slate-400 text-base md:text-lg font-light leading-relaxed max-w-lg mx-auto md:mx-0">
+              Combinamos arte, ciência e a tecnologia mais avançada para criar resultados que superam expectativas.
+            </p>
           </div>
           <div className="hidden lg:block relative text-white/5 select-none">
+            <span className="display text-[14vw] font-black italic tracking-tighter absolute -right-24 bottom-0 whitespace-nowrap">PREVENÇÃO</span>
           </div>
         </div>
 
@@ -89,6 +97,17 @@ export default function Services() {
               <div className="text-brand-accent mb-6 md:mb-8 opacity-60 group-hover:opacity-100 transition-opacity transform group-hover:scale-110 duration-500">
                 {item.icon}
               </div>
+              <h3 className="serif text-2xl md:text-3xl mb-4 text-white group-hover:text-brand-accent transition-colors uppercase font-medium">
+                {item.title}
+              </h3>
+              <p className="text-slate-500 leading-relaxed mb-8 font-light italic text-sm md:text-base">
+                {item.description}
+              </p>
+              <a href="#contactos" className="text-[10px] font-bold tracking-[0.3em] text-brand-accent uppercase mt-auto flex items-center gap-2 hover:text-white transition-colors">
+                <span>SAIBA MAIS</span>
+                <span className="w-8 h-[1px] bg-brand-accent/30 group-hover:bg-white transition-all group-hover:w-12" />
+              </a>
+              {/* Corner accent for group hover */}
               <div className="absolute top-0 right-0 w-2 h-2 bg-brand-accent/0 group-hover:bg-brand-accent transition-all duration-500" />
             </motion.div>
           ))}

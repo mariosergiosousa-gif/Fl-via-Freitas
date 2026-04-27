@@ -125,6 +125,7 @@ export default function Contact() {
                 <select name="subject" className="w-full bg-transparent border-b border-white/10 px-0 py-4 focus:border-brand-accent outline-none transition-all serif text-lg text-white rounded-none cursor-pointer">
                   <option value="Consulta de Avaliação" className="bg-brand-paper">Consulta de Avaliação</option>
                   <option value="Ortodontia" className="bg-brand-paper">Ortodontia</option>
+                  <option value="Implantes" className="bg-brand-paper">Implantes</option>
                   <option value="Outros Assuntos" className="bg-brand-paper">Outros Assuntos</option>
                 </select>
               </div>

@@ -24,6 +24,10 @@ export default function App() {
         {/* Space Gallery - Clean Video Layout */}
         <section id="o-nosso-espaco" className="py-32 bg-[#050608] overflow-hidden border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6 mb-16 text-left">
+            <h2 className="serif text-4xl md:text-7xl text-white italic mb-12 uppercase tracking-tighter leading-none">
+              A Excelência <br /> <span className="text-brand-accent">em Detalhes.</span>
+            </h2>
+            
             <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
               {[
                 { title: "Design Moderno", src: "/videos/tour1.mp4" },

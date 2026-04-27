@@ -13,6 +13,28 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center w-full relative z-10">
         {/* Left Content */}
         <div className="md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left translate-y-0 md:translate-y-[-20px]">
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="serif text-xl sm:text-3xl md:text-4xl lg:text-5xl leading-[0.95] text-white mb-8 md:mb-10 tracking-tighter uppercase font-bold"
+          >
+            Transformando sorrisos, promovendo <br className="hidden sm:block" />
+            saúde bucal e a melhoria <br className="hidden sm:block" />
+            <span className="text-brand-accent">da autoestima!</span>
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-sm md:text-base text-slate-300 max-w-sm md:max-w-lg mb-10 md:mb-12 leading-relaxed font-light text-center md:text-left mx-auto md:mx-0"
+          >
+            Na Excelência em Odontologia, cada sorriso conta uma história. Nossa missão é cuidar da saúde bucal e elevar a autoestima com tecnologia de ponta e atendimento personalizado.
+            <br className="hidden md:block" /> <br className="hidden md:block" />
+            Com uma equipe qualificada e ambiente acolhedor, oferecemos desde a prevenção até os tratamentos estéticos mais avançados.
+          </motion.p>
+          
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

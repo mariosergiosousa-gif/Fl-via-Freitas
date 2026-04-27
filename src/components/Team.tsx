@@ -12,7 +12,7 @@ export default function Team() {
     {
       name: "Dra. Diana Castro",
       role: "Especialista em Ortodontia",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_3:4,c_fill,g_face,f_auto,q_auto/v1777071953/Diana_Castro_jbuiam.png",
+      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=800", // Updated to a professional medical portrait
       specialty: "Ortodontia & Estética",
     },
     {
@@ -64,6 +64,12 @@ export default function Team() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-left mb-16 md:mb-24 max-w-3xl px-4 md:px-0">
+          <h2 className="serif text-4xl sm:text-5xl md:text-7xl text-white mb-4 uppercase italic leading-tight text-left">
+            Corpo <span className="text-brand-accent">Clínico.</span>
+          </h2>
+          <p className="text-slate-400 text-base md:text-lg leading-relaxed font-light">
+            A nossa equipe reúne profissionais dedicados à excelência clínica, unindo conhecimento e tecnologia para transformar o seu sorriso.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-8 lg:gap-10 mb-32 max-w-6xl mx-auto">
@@ -84,9 +90,19 @@ export default function Team() {
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-brand-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center p-4">
+                  <button className="bg-brand-accent text-black px-4 py-2 rounded-none text-[9px] font-bold tracking-widest flex items-center gap-2 hover:bg-white transition-all uppercase">
+                    Saber Mais <ExternalLink size={12} />
+                  </button>
                 </div>
               </div>
               <div className="text-center px-4">
+                <h3 className="serif text-2xl text-white mb-2 leading-none uppercase font-bold">{member.name}</h3>
+                <p className="display text-[10px] font-bold tracking-[0.2em] text-brand-accent uppercase mb-3">{member.role}</p>
+                <div className="flex items-center justify-center gap-2 text-slate-500 text-[9px] font-bold tracking-[0.1em] uppercase italic">
+                  <span className="w-3 h-px bg-white/10" />
+                  <span>{member.specialty}</span>
+                  <span className="w-3 h-px bg-white/10" />
+                </div>
               </div>
             </motion.div>
           ))}
@@ -95,6 +111,8 @@ export default function Team() {
 
         <div className="pt-24 border-t border-white/5">
           <div className="text-center mb-16">
+            <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent mb-4 uppercase">Apoio não Clínico</p>
+            <h3 className="serif text-3xl md:text-4xl text-white italic">A base da nossa excelência.</h3>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
@@ -116,6 +134,9 @@ export default function Team() {
                   />
                 </div>
                 <div>
+                  <h4 className="serif text-2xl text-white mb-1 uppercase font-bold">{member.name}</h4>
+                  <p className="display text-[10px] font-bold tracking-widest text-brand-accent uppercase mb-2">{member.role}</p>
+                  <p className="text-slate-500 text-[10px] uppercase tracking-wider italic">{member.specialty}</p>
                 </div>
               </motion.div>
             ))}
