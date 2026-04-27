@@ -1,8 +1,27 @@
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Clock, Instagram, Facebook, ArrowUpRight } from 'lucide-react';
-import { FormEvent } from 'react';
+import { FormEvent, useState, ChangeEvent } from 'react';
 
 export default function Contact() {
+  const [phoneValue, setPhoneValue] = useState('');
+
+  const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length > 11) value = value.slice(0, 11);
+
+    if (value.length > 10) {
+      value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+    } else if (value.length > 6) {
+      value = value.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+    } else if (value.length > 2) {
+      value = value.replace(/^(\d{2})(\d{0,5}).*/, '($1) $2');
+    } else if (value.length > 0) {
+      value = value.replace(/^(\d{0,2}).*/, '($1');
+    }
+    
+    setPhoneValue(value);
+  };
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -115,7 +134,15 @@ export default function Contact() {
                   <input required name="email" type="email" placeholder="E-mail" className="w-full bg-transparent border-b border-white/10 px-0 py-4 focus:border-brand-accent outline-none transition-all serif text-lg text-white placeholder:text-slate-600 rounded-none" />
                 </div>
                 <div className="relative">
-                  <input required name="tel" type="tel" placeholder="Telefone" className="w-full bg-transparent border-b border-white/10 px-0 py-4 focus:border-brand-accent outline-none transition-all serif text-lg text-white placeholder:text-slate-600 rounded-none" />
+                  <input 
+                    required 
+                    name="tel" 
+                    type="tel" 
+                    placeholder="(00) 00000-0000" 
+                    value={phoneValue}
+                    onChange={handlePhoneChange}
+                    className="w-full bg-transparent border-b border-white/10 px-0 py-4 focus:border-brand-accent outline-none transition-all serif text-lg text-white placeholder:text-slate-600 rounded-none" 
+                  />
                 </div>
               </div>
               <div>
