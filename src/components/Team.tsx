@@ -65,8 +65,8 @@ export default function Team() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="relative mb-16 md:mb-24 px-4 md:px-0 overflow-visible">
           {/* Background Shadow Text */}
-          <div className="absolute -top-8 -left-8 md:-top-16 md:-left-12 select-none pointer-events-none opacity-[0.05] z-0">
-            <span className="text-8xl md:text-[180px] font-black uppercase tracking-tighter text-white italic leading-none block transform -skew-x-12 origin-left">
+          <div className="absolute -top-12 -left-4 md:-top-24 md:-left-12 select-none pointer-events-none opacity-[0.03] z-0 overflow-hidden w-full">
+            <span className="text-9xl md:text-[220px] font-black uppercase tracking-tighter text-white italic leading-none block transform -skew-x-12 origin-left whitespace-nowrap">
               Dentistas
             </span>
           </div>
