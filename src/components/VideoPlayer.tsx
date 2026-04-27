@@ -29,11 +29,13 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
     >
       <video 
         ref={videoRef}
-        src={src} 
+        src={src.startsWith('http') ? src : `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${src.replace(/^\//, '')}`} 
         className={`w-full h-full object-cover transition-all duration-700 ${isPlaying ? '' : 'grayscale group-hover:grayscale-0'}`}
         muted 
         loop 
         playsInline
+        preload="auto"
+        onError={(e) => console.error(`Erro ao carregar o vídeo: ${src}`, e)}
       />
       
       {/* Overlay */}

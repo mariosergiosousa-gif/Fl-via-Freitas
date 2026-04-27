@@ -40,15 +40,18 @@ Os arquivos gerados estarão na pasta `dist/`.
 
 Este projeto já inclui um workflow do GitHub Actions (`.github/workflows/deploy.yml`) que automatiza o deploy para o GitHub Pages sempre que você fizer um push para a branch `main`.
 
-**Importante:** Se você estiver publicando em um subdiretório (ex: `https://seu-usuario.github.io/nome-do-repositorio/`), você precisará configurar o `base` no arquivo `vite.config.ts`:
+**Crucial para os vídeos funcionarem:**
+Se o seu site estiver em um subdiretório (ex: `https://seu-usuario.github.io/nome-do-repositorio/`), você **DEVE** configurar o campo `base` no arquivo `vite.config.ts` com o nome do seu repositório:
 
 ```typescript
 // vite.config.ts
 export default defineConfig({
-  base: '/nome-do-repositorio/',
-  // ... resto da configuração
+  base: '/nome-do-repositorio/', // Substitua pelo nome real do seu repo
+  // ...
 })
 ```
+
+Se você estiver usando um domínio próprio (ex: `www.seusite.com.br`), pode deixar `base: '/'`.
 
 ## 🛠️ Tecnologias Utilizadas
 
