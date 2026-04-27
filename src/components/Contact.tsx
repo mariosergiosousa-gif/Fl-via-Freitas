@@ -133,7 +133,10 @@ export default function Contact() {
                 <div className="relative">
                   <input required name="email" type="email" placeholder="E-mail" className="w-full bg-transparent border-b border-white/10 px-0 py-4 focus:border-brand-accent outline-none transition-all serif text-lg text-white placeholder:text-slate-600 rounded-none" />
                 </div>
-                <div className="relative">
+                <div className="relative pt-2">
+                  <label className="display text-[10px] font-bold tracking-[0.2em] text-brand-accent uppercase mb-1 block">
+                    Telefone
+                  </label>
                   <input 
                     required 
                     name="tel" 
@@ -141,7 +144,7 @@ export default function Contact() {
                     placeholder="(00) 00000-0000" 
                     value={phoneValue}
                     onChange={handlePhoneChange}
-                    className="w-full bg-transparent border-b border-white/10 px-0 py-4 focus:border-brand-accent outline-none transition-all serif text-lg text-white placeholder:text-slate-600 rounded-none" 
+                    className="w-full bg-transparent border-b border-white/10 px-0 py-3 focus:border-brand-accent outline-none transition-all serif text-lg text-white placeholder:text-slate-600 rounded-none" 
                   />
                 </div>
               </div>

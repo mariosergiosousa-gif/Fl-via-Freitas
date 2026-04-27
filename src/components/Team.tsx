@@ -6,37 +6,37 @@ export default function Team() {
     {
       name: "Dra. Flávia Freitas",
       role: "Diretora Clínica & Especialista",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_3:4,c_fill,g_face,f_auto,q_auto/v1776958804/Fl%C3%A1via_Freitas_nz6qr4.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1776958804/Fl%C3%A1via_Freitas_nz6qr4.png",
       specialty: "Endodontia & Reabilitação Oral",
     },
     {
       name: "Dra. Diana Castro",
       role: "Especialista em Ortodontia",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777071953/Diana_Castro_jbuiam.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1777071953/Diana_Castro_jbuiam.png",
       specialty: "Ortodontia & Estética",
     },
     {
       name: "Dra. Letícia Sousa",
       role: "Atendimento à Criança e Prevenção",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_3:4,c_fill,g_face,f_auto,q_auto/v1776965407/Let%C3%ADcia_Sousa_vt4iqi.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1776965407/Let%C3%ADcia_Sousa_vt4iqi.png",
       specialty: "Odontopediatria & Prevenção",
     },
     {
       name: "Dra. Bruna Almeida",
       role: "Especialista em Periodontia",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_3:4,c_fill,g_face,f_auto,q_auto/v1776955882/Bruna_Almeida_ga4uif.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1776955882/Bruna_Almeida_ga4uif.png",
       specialty: "Periodontia",
     },
     {
       name: "Dra. Erika Braga",
       role: "Prótese e Dentística",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_3:4,c_fill,g_face,f_auto,q_auto/v1776966194/Erika_Braga_clzsqb.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1776966194/Erika_Braga_clzsqb.png",
       specialty: "Reabilitação Oral & Estética",
     },
     {
       name: "Dra. Tamirys Teixeira",
       role: "Cirurgiã e Implante",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_3:4,c_fill,g_face,f_auto,q_auto/v1776967272/Tamirys_Teixeira_qipfgv.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1776967272/Tamirys_Teixeira_qipfgv.png",
       specialty: "Cirurgia & Implantodontia",
     },
   ];
@@ -45,26 +45,19 @@ export default function Team() {
     {
       name: "Patrícia Natália",
       role: "Auxiliar",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_1:1,c_fill,g_face,f_auto,q_auto/v1776968503/Patr%C3%ADcia_Nat%C3%A1lia_qpwdmp.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_600,h_600,f_auto,q_auto/v1776968503/Patr%C3%ADcia_Nat%C3%A1lia_qpwdmp.png",
       specialty: "Apoio Clínico",
     },
     {
       name: "Lidiane Assis",
       role: "Secretária",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/ar_1:1,c_fill,g_face,f_auto,q_auto/v1776968214/Lidiane_Assis_qcpvjn.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_600,h_600,f_auto,q_auto/v1776968214/Lidiane_Assis_qcpvjn.png",
       specialty: "Atendimento & Gestão",
     },
   ];
 
   return (
     <section id="equipe" className="relative py-24 md:py-32 bg-brand-paper border-t border-white/10 overflow-hidden">
-      {/* Background Text Overlay */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 pointer-events-none select-none z-0">
-        <span className="serif text-[22vw] font-black uppercase italic text-white/[0.02] leading-none whitespace-nowrap tracking-tighter block">
-          Dentistas
-        </span>
-      </div>
-
       {/* Decorative Elements */}
       <div className="absolute top-1/4 left-0 w-32 h-32 dots-pattern opacity-10" />
       <div className="absolute bottom-1/4 right-0 w-32 h-32 dots-pattern opacity-10" />
@@ -89,15 +82,16 @@ export default function Team() {
               transition={{ delay: index * 0.05 }}
               className="group"
             >
-              <div className="relative aspect-[3/4] overflow-hidden fluid-mask mb-6 shadow-2xl border border-white/5 mx-auto bg-brand-muted max-w-[280px] sm:max-w-none">
+              <div className="relative aspect-[3/4] overflow-hidden fluid-mask mb-6 shadow-2xl border border-white/10 mx-auto bg-gradient-to-br from-slate-900 to-black max-w-[280px] sm:max-w-none">
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105 opacity-85 group-hover:opacity-100"
+                  className="w-full h-full object-cover grayscale-[0.6] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-brand-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center p-4">
-                  <button className="bg-brand-accent text-black px-4 py-2 rounded-none text-[9px] font-bold tracking-widest flex items-center gap-2 hover:bg-white transition-all uppercase">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-brand-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center p-4">
+                   <button className="bg-brand-accent text-black px-4 py-2 rounded-none text-[9px] font-bold tracking-widest flex items-center gap-2 hover:bg-white transition-all uppercase transform translate-y-4 group-hover:translate-y-0 duration-500 opacity-0 group-hover:opacity-100">
                     Saber Mais <ExternalLink size={12} />
                   </button>
                 </div>

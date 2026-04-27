@@ -20,8 +20,12 @@
 }
 
 .fluid-mask {
-  mask-image: radial-gradient(circle at center, black, transparent);
-  border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+  border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  transition: border-radius 1s ease-in-out;
+}
+
+.group:hover .fluid-mask {
+  border-radius: 60% 40% 40% 60% / 30% 60% 40% 70%;
 }
 
 .dots-pattern {
