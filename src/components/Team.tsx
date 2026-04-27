@@ -12,7 +12,7 @@ export default function Team() {
     {
       name: "Dra. Diana Castro",
       role: "Especialista em Ortodontia",
-      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=800", // Updated to a professional medical portrait
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777071953/Diana_Castro_jbuiam.png",
       specialty: "Ortodontia & Estética",
     },
     {
