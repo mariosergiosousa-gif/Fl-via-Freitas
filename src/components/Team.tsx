@@ -63,13 +63,22 @@ export default function Team() {
       <div className="absolute bottom-1/4 right-0 w-32 h-32 dots-pattern opacity-10" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-left mb-16 md:mb-24 max-w-3xl px-4 md:px-0">
-          <h2 className="serif text-4xl sm:text-5xl md:text-7xl text-white mb-4 uppercase italic leading-tight text-left">
-            Corpo <span className="text-brand-accent">Clínico.</span>
-          </h2>
-          <p className="text-slate-400 text-base md:text-lg leading-relaxed font-light">
-            A nossa equipe reúne profissionais dedicados à excelência clínica, unindo conhecimento e tecnologia para transformar o seu sorriso.
-          </p>
+        <div className="relative mb-16 md:mb-24 px-4 md:px-0 overflow-visible">
+          {/* Background Shadow Text */}
+          <div className="absolute -top-8 -left-8 md:-top-16 md:-left-12 select-none pointer-events-none opacity-[0.05] z-0">
+            <span className="text-8xl md:text-[180px] font-black uppercase tracking-tighter text-white italic leading-none block transform -skew-x-12 origin-left">
+              Dentistas
+            </span>
+          </div>
+          
+          <div className="relative z-10 text-left max-w-3xl">
+            <h2 className="serif text-4xl sm:text-5xl md:text-7xl text-white mb-4 uppercase italic leading-tight text-left">
+              Corpo <span className="text-brand-accent">Clínico.</span>
+            </h2>
+            <p className="text-slate-400 text-base md:text-lg leading-relaxed font-light">
+              A nossa equipe reúne profissionais dedicados à excelência clínica, unindo conhecimento e tecnologia para transformar o seu sorriso.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-8 lg:gap-10 mb-32 max-w-6xl mx-auto">
