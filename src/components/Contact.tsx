@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Clock, Instagram, Linkedin, Facebook, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Instagram, Facebook, ArrowUpRight } from 'lucide-react';
 import { FormEvent } from 'react';
 
 export default function Contact() {
@@ -96,9 +96,6 @@ export default function Contact() {
               </a>
               <div className="w-12 h-12 rounded-none border border-white/10 flex items-center justify-center text-slate-400 hover:bg-brand-accent hover:border-brand-accent hover:text-black transition-all cursor-pointer">
                 <Facebook size={20} />
-              </div>
-              <div className="w-12 h-12 rounded-none border border-white/10 flex items-center justify-center text-slate-400 hover:bg-brand-accent hover:border-brand-accent hover:text-black transition-all cursor-pointer">
-                <Linkedin size={20} />
               </div>
             </div>
           </div>

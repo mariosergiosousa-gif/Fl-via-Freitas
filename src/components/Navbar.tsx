@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Phone, Mail, Instagram, Linkedin, Facebook } from 'lucide-react';
+import { Menu, X, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -107,7 +107,6 @@ export default function Navbar() {
                 </a>
                 <div className="flex justify-center space-x-8">
                   <Instagram size={24} className="text-brand-ink/40 hover:text-brand-accent transition-colors" />
-                  <Linkedin size={24} className="text-brand-ink/40 hover:text-brand-accent transition-colors" />
                   <Facebook size={24} className="text-brand-ink/40 hover:text-brand-accent transition-colors" />
                 </div>
               </div>
