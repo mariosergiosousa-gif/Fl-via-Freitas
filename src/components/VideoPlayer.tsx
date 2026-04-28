@@ -22,6 +22,15 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
     }
   };
 
+  const getAssetUrl = (path: string) => {
+    if (path.startsWith('http')) return path;
+    const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+      ? import.meta.env.BASE_URL.slice(0, -1) 
+      : import.meta.env.BASE_URL;
+    const cleanPath = path.startsWith('/') ? path : `/${path}`;
+    return `${baseUrl}${cleanPath}`;
+  };
+
   return (
     <div 
       onClick={togglePlay}
@@ -29,7 +38,7 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
     >
       <video 
         ref={videoRef}
-        src={src.startsWith('http') ? src : `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${src.replace(/^\//, '')}`} 
+        src={getAssetUrl(src)} 
         className={`w-full h-full object-cover transition-all duration-700 ${isPlaying ? '' : 'grayscale group-hover:grayscale-0'}`}
         muted 
         loop 

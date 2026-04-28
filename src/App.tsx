@@ -30,10 +30,10 @@ export default function App() {
             
             <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
               {[
-                { title: "Design Moderno", src: "videos/tour1.mp4" },
-                { title: "Tecnologia Digital", src: "videos/tour2.mp4" },
-                { title: "Conforto Premium", src: "videos/tour3.mp4" },
-                { title: "Experiência Única", src: "videos/tour4.mp4" }
+                { title: "Design Moderno", src: "/videos/tour1.mp4" },
+                { title: "Tecnologia Digital", src: "/videos/tour2.mp4" },
+                { title: "Conforto Premium", src: "/videos/tour3.mp4" },
+                { title: "Experiência Única", src: "/videos/tour4.mp4" }
               ].map((video, i) => (
                 <VideoPlayer key={i} src={video.src} title={video.title} />
               ))}
