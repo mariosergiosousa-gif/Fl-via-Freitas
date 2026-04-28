@@ -31,8 +31,6 @@ export default function Hero() {
             className="text-sm md:text-base text-slate-300 max-w-sm md:max-w-lg mb-10 md:mb-12 leading-relaxed font-light text-center md:text-left mx-auto md:mx-0"
           >
             Na Excelência em Odontologia, cada sorriso conta uma história. Nossa missão é cuidar da saúde bucal e elevar a autoestima com tecnologia de ponta e atendimento personalizado.
-            <br className="hidden md:block" /> <br className="hidden md:block" />
-            Com uma equipe qualificada e ambiente acolhedor, oferecemos desde a prevenção até os tratamentos estéticos mais avançados.
           </motion.p>
           
           <motion.div 

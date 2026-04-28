@@ -5,13 +5,13 @@ export default function Team() {
   const clinicalTeam = [
     {
       name: "Dra. Flávia Freitas",
-      role: "diretora clínica & especialista",
+      role: "Diretora clínica & especialista",
       image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1777342602/Fl%C3%A1via_Freitas_hqutbt.png",
       specialty: "Endodontia & Reabilitação Oral",
     },
     {
       name: "Dra. Diana Castro",
-      role: "diretora clínica & especialista",
+      role: "Diretora clínica & especialista",
       image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1777071953/Diana_Castro_jbuiam.png",
       specialty: "Ortodontia & Estética",
     },

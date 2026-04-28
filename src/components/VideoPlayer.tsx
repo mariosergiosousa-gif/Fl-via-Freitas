@@ -46,7 +46,6 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
         ref={videoRef}
         src={getAssetUrl(src)} 
         className={`w-full h-full object-cover transition-all duration-700 ${isPlaying ? '' : 'grayscale group-hover:grayscale-0'}`}
-        muted 
         loop 
         playsInline
         preload="metadata"
