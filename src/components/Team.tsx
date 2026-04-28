@@ -51,13 +51,13 @@ export default function Team() {
     {
       name: "Sthefany Santos",
       role: "Auxiliar",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777405872/Sthefanyy_Santos_s2qsb6.jpg",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_600,h_600,f_auto,q_auto/v1777405872/Sthefanyy_Santos_s2qsb6.jpg",
       specialty: "Apoio clínico",
     },
     {
       name: "Ellen Brito",
       role: "Auxiliar de saúde bucal",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777405404/Ellen_Brito_qou965.jpg",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_600,h_600,f_auto,q_auto/v1777405404/Ellen_Brito_qou965.jpg",
       specialty: "Apoio Clínico",
     },
     {

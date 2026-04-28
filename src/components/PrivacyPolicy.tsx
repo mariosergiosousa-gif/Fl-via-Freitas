@@ -118,7 +118,7 @@ export default function PrivacyPolicy({ onClose }: PrivacyPolicyProps) {
             <p>Para dúvidas ou solicitações relacionadas à privacidade:</p>
             <ul className="list-none space-y-2 border-l border-brand-accent/30 pl-6">
               <li><span className="text-brand-accent font-medium">📧 E-mail:</span> excelenciaodondologia8@gmail.com</li>
-              <li><span className="text-brand-accent font-medium">📍 Clínica:</span> Rua Barão do Rio Branco, 83 Centro, Brumadinho - MG</li>
+              <li><span className="text-brand-accent font-medium">📍 Clínica:</span> Rua Barão do Rio Branco, 83, Centro, Brumadinho - MG</li>
             </ul>
           </section>
         </div>
