@@ -17,7 +17,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="serif text-xl sm:text-3xl md:text-4xl lg:text-5xl leading-[0.95] text-white mb-8 md:mb-10 tracking-tighter uppercase font-bold"
+            className="serif text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[0.95] text-white mb-8 md:mb-10 tracking-tighter uppercase font-bold"
           >
             Transformando sorrisos, promovendo <br className="hidden sm:block" />
             saúde bucal e a melhoria <br className="hidden sm:block" />
