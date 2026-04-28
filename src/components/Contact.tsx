@@ -47,13 +47,13 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left info */}
-          <div className="text-left">
+          <div className="text-left p-0 m-0 lg:-mr-10">
             <h2 className="serif text-4xl md:text-6xl leading-[1.1] text-white mb-12 italic uppercase">
               Visite-nos em <br />
               <span className="text-brand-accent not-italic font-bold">Brumadinho, MG.</span>
             </h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-x-16 sm:gap-y-12 text-center sm:text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-x-16 sm:gap-y-12 text-left">
               <div className="group cursor-pointer">
                 <a 
                   href="https://maps.app.goo.gl/TB6GvNZGQ5vmYYaP6" 
