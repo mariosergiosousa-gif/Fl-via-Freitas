@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -10,8 +11,12 @@ import Team from './components/Team';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import VideoPlayer from './components/VideoPlayer';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import { AnimatePresence } from 'motion/react';
 
 export default function App() {
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
+
   const marqueeItems = [
     "TECNOLOGIA DE PONTA",
     "ATENDIMENTO HUMANIZADO",
@@ -44,7 +49,7 @@ export default function App() {
         
         {/* Space Gallery - Clean Video Layout */}
         <section id="o-nosso-espaco" className="py-32 bg-[#050608] overflow-hidden border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-6 mb-16 text-left">
+          <div className="max-w-7xl auto px-6 mb-16 text-left">
             <h2 className="serif text-4xl md:text-7xl text-white italic mb-6 uppercase tracking-tighter leading-none">
               A Excelência <br /> <span className="text-brand-accent">em Detalhes.</span>
             </h2>
@@ -67,7 +72,13 @@ export default function App() {
 
         <Contact />
       </main>
-      <Footer />
+      <Footer onShowPrivacy={() => setShowPrivacyPolicy(true)} />
+
+      <AnimatePresence>
+        {showPrivacyPolicy && (
+          <PrivacyPolicy onClose={() => setShowPrivacyPolicy(false)} />
+        )}
+      </AnimatePresence>
     </div>
   );
 }

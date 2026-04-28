@@ -1,4 +1,8 @@
-export default function Footer() {
+interface FooterProps {
+  onShowPrivacy: () => void;
+}
+
+export default function Footer({ onShowPrivacy }: FooterProps) {
   return (
     <footer className="py-24 bg-[#050608] text-slate-600 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
@@ -26,7 +30,14 @@ export default function Footer() {
           <div>
             <h4 className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase mb-10">Informação</h4>
             <ul className="space-y-4">
-              <li><a href="#" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Privacidade</a></li>
+              <li>
+                <button 
+                  onClick={onShowPrivacy}
+                  className="text-xs hover:text-white transition-colors uppercase tracking-widest cursor-pointer text-left block w-full"
+                >
+                  Privacidade
+                </button>
+              </li>
               <li><a href="#" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Termos</a></li>
             </ul>
           </div>
