@@ -24,11 +24,17 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
 
   const getAssetUrl = (path: string) => {
     if (path.startsWith('http')) return path;
-    const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
-      ? import.meta.env.BASE_URL.slice(0, -1) 
-      : import.meta.env.BASE_URL;
-    const cleanPath = path.startsWith('/') ? path : `/${path}`;
-    return `${baseUrl}${cleanPath}`;
+    
+    // Normalize base URL (e.g. '/' or '/repo/' or './')
+    let base = import.meta.env.BASE_URL;
+    
+    // Ensure base ends with / for joining
+    if (!base.endsWith('/')) base += '/';
+    
+    // Remove leading slash from path to avoid double slashes or absolute path resolution
+    const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+    
+    return `${base}${cleanPath}`;
   };
 
   return (
