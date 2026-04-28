@@ -12,12 +12,33 @@ import Footer from './components/Footer';
 import VideoPlayer from './components/VideoPlayer';
 
 export default function App() {
+  const marqueeItems = [
+    "TECNOLOGIA DE PONTA",
+    "ATENDIMENTO HUMANIZADO",
+    "SORRISOS TRANSFORMADOS",
+    "EXCELÊNCIA EM CADA DETALHE",
+    "ESTÉTICA AVANÇADA",
+    "SAÚDE BUCAL COMPLETA"
+  ];
+
   return (
     <div className="min-h-screen text-slate-100 bg-[#050608]">
       <Navbar />
       <main>
         <Hero />
         
+        {/* Marquee Section */}
+        <div className="py-6 bg-brand-accent/5 border-y border-white/5 overflow-hidden flex whitespace-nowrap">
+          <div className="animate-marquee flex gap-12 items-center">
+            {[...marqueeItems, ...marqueeItems].map((item, i) => (
+              <span key={i} className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent/60 uppercase">
+                {item}
+                <span className="ml-12 text-white/10">•</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
         <Services />
         <Team />
         

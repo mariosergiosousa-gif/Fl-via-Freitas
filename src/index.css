@@ -14,9 +14,23 @@
 }
 
 @layer base {
+  html, body {
+    @apply overflow-x-hidden;
+    height: auto;
+    min-height: 100%;
+  }
   body {
     @apply bg-brand-paper text-brand-ink font-sans antialiased selection:bg-brand-accent selection:text-black;
   }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
 }
 
 .fluid-mask {
