@@ -7,7 +7,7 @@ export default function Team() {
       name: "Dra. Flávia Freitas",
       role: "Diretora clínica & especialista",
       image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1777342602/Fl%C3%A1via_Freitas_hqutbt.png",
-      specialty: "Endodontia & Reabilitação Oral",
+      specialty: "Endodontia",
     },
     {
       name: "Dra. Diana Castro",
@@ -46,6 +46,18 @@ export default function Team() {
       name: "Patrícia Natália",
       role: "Auxiliar",
       image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_600,h_600,f_auto,q_auto/v1776968503/Patr%C3%ADcia_Nat%C3%A1lia_qpwdmp.png",
+      specialty: "Apoio Clínico",
+    },
+    {
+      name: "Sthefany Santos",
+      role: "Auxiliar",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777405872/Sthefanyy_Santos_s2qsb6.jpg",
+      specialty: "Apoio clínico",
+    },
+    {
+      name: "Ellen Brito",
+      role: "Auxiliar de saúde bucal",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777405404/Ellen_Brito_qou965.jpg",
       specialty: "Apoio Clínico",
     },
     {
@@ -114,7 +126,6 @@ export default function Team() {
 
         <div className="pt-24 border-t border-white/5">
           <div className="text-center mb-16">
-            <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent mb-4 uppercase">Apoio não Clínico</p>
             <h3 className="serif text-3xl md:text-4xl text-white italic">A base da nossa excelência.</h3>
           </div>
           
