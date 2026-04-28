@@ -94,13 +94,15 @@ export default function Contact() {
               </div>
 
               <div className="group cursor-pointer">
-                <h4 className="display text-[10px] font-bold tracking-widest text-slate-500 mb-4 uppercase flex items-center justify-center sm:justify-start gap-2">
-                  <Mail size={14} className="text-brand-accent" />
-                  E-mail
-                </h4>
-                <p className="serif text-lg md:text-xl text-white leading-tight break-all font-light italic">
-                  excelenciaodondologia8@gmail.com
-                </p>
+                <a href="mailto:excelenciaodondologia8@gmail.com" className="block group">
+                  <h4 className="display text-[10px] font-bold tracking-widest text-slate-500 mb-4 uppercase flex items-center justify-center sm:justify-start gap-2 group-hover:text-brand-accent transition-colors">
+                    <Mail size={14} className="text-brand-accent" />
+                    E-mail
+                  </h4>
+                  <p className="serif text-lg md:text-xl text-white leading-tight break-all font-light italic group-hover:text-brand-accent transition-colors">
+                    excelenciaodondologia8@gmail.com
+                  </p>
+                </a>
               </div>
             </div>
 
