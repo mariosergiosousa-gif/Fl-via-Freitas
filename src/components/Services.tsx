@@ -79,9 +79,6 @@ export default function Services() {
               Combinamos arte, ciência e a tecnologia mais avançada para criar resultados que superam expectativas.
             </p>
           </div>
-          <div className="hidden lg:block relative text-white/5 select-none">
-            <span className="display text-[14vw] font-black italic tracking-tighter absolute -right-24 bottom-0 whitespace-nowrap">PREVENÇÃO</span>
-          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-white/10">

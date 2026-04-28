@@ -33,8 +33,8 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
     
     // Remove leading slash from path to avoid double slashes or absolute path resolution
     const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-    
-    return `${base}${cleanPath}`;
+    const finalUrl = `${base}${cleanPath}`;
+    return finalUrl;
   };
 
   return (
@@ -49,9 +49,21 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
         muted 
         loop 
         playsInline
-        preload="auto"
-        onError={(e) => console.error(`Erro ao carregar o vídeo: ${src}`, e)}
+        preload="metadata"
+        onError={(e) => {
+          console.error(`Erro ao carregar o vídeo: ${src}`, e);
+          // Optional: handle broken video state
+        }}
       />
+      
+      {/* Fallback for broken video / loading */}
+      {!isPlaying && (
+        <div className="absolute inset-0 flex items-center justify-center bg-brand-paper/20">
+          <div className="text-[10px] text-white/20 uppercase tracking-widest font-bold rotate-90 whitespace-nowrap">
+            PREVIEW
+          </div>
+        </div>
+      )}
       
       {/* Overlay */}
       <div className={`absolute inset-0 transition-all duration-500 flex items-center justify-center ${isPlaying ? 'bg-transparent opacity-0 group-hover:opacity-100 group-hover:bg-black/20' : 'bg-black/40 group-hover:bg-black/20'}`}>

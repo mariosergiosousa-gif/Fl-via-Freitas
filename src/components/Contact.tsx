@@ -30,7 +30,7 @@ export default function Contact() {
     const tel = formData.get('tel');
     const subject = formData.get('subject');
 
-    const mailtoUrl = `mailto:geral@excelenciaodontologia.com?subject=Pedido de Consulta - ${name}&body=Nome: ${name}%0D%0AEmail: ${email}%0D%0ATelefone: ${tel}%0D%0AAssunto: ${subject}`;
+    const mailtoUrl = `mailto:excelenciaodondologia8@gmail.com?subject=Pedido de Consulta - ${name}&body=Nome: ${name}%0D%0AEmail: ${email}%0D%0ATelefone: ${tel}%0D%0AAssunto: ${subject}`;
     
     window.location.href = mailtoUrl;
   };
@@ -59,7 +59,7 @@ export default function Contact() {
                     Endereço
                   </h4>
                   <p className="serif text-xl md:text-2xl text-white leading-tight font-medium group-hover:text-brand-accent transition-colors">
-                    Rua Aristides Passos, 201 <br />
+                    Rua Barão do Rio Branco, 83 <br />
                     Centro, Brumadinho - MG
                   </p>
                 </a>
@@ -99,7 +99,7 @@ export default function Contact() {
                   E-mail
                 </h4>
                 <p className="serif text-lg md:text-xl text-white leading-tight break-all font-light italic">
-                  geral@excelenciaodontologia.com
+                  excelenciaodondologia8@gmail.com
                 </p>
               </div>
             </div>
@@ -113,9 +113,6 @@ export default function Contact() {
               >
                 <Instagram size={20} />
               </a>
-              <div className="w-12 h-12 rounded-none border border-white/10 flex items-center justify-center text-slate-400 hover:bg-brand-accent hover:border-brand-accent hover:text-black transition-all cursor-pointer">
-                <Facebook size={20} />
-              </div>
             </div>
           </div>
 
@@ -134,9 +131,6 @@ export default function Contact() {
                   <input required name="email" type="email" placeholder="E-mail" className="w-full bg-transparent border-b border-white/10 px-0 py-4 focus:border-brand-accent outline-none transition-all serif text-lg text-white placeholder:text-slate-600 rounded-none" />
                 </div>
                 <div className="relative pt-2">
-                  <label className="display text-[10px] font-bold tracking-[0.2em] text-brand-accent uppercase mb-1 block">
-                    Telefone
-                  </label>
                   <input 
                     required 
                     name="tel" 

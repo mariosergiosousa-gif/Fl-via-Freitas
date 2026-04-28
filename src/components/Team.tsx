@@ -5,38 +5,38 @@ export default function Team() {
   const clinicalTeam = [
     {
       name: "Dra. Flávia Freitas",
-      role: "Diretora Clínica & Especialista",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1776958804/Fl%C3%A1via_Freitas_nz6qr4.png",
+      role: "diretora clínica & especialista",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1777342602/Fl%C3%A1via_Freitas_hqutbt.png",
       specialty: "Endodontia & Reabilitação Oral",
     },
     {
       name: "Dra. Diana Castro",
-      role: "Especialista em Ortodontia",
+      role: "diretora clínica & especialista",
       image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1777071953/Diana_Castro_jbuiam.png",
       specialty: "Ortodontia & Estética",
     },
     {
       name: "Dra. Letícia Sousa",
       role: "Atendimento à Criança e Prevenção",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1776965407/Let%C3%ADcia_Sousa_vt4iqi.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1777343013/Let%C3%ADcia_Sousa_vfapnb.png",
       specialty: "Odontopediatria & Prevenção",
     },
     {
       name: "Dra. Bruna Almeida",
       role: "Especialista em Periodontia",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1776955882/Bruna_Almeida_ga4uif.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1777343737/Bruna_Almeida_jnejaj.png",
       specialty: "Periodontia",
     },
     {
       name: "Dra. Erika Braga",
       role: "Prótese e Dentística",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1776966194/Erika_Braga_clzsqb.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1777343524/Erika_Braga_kwnz6t.png",
       specialty: "Reabilitação Oral & Estética",
     },
     {
       name: "Dra. Tamirys Teixeira",
       role: "Cirurgiã e Implante",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1776967272/Tamirys_Teixeira_qipfgv.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1777343991/Tamirys_Teixeira_k4vty3.png",
       specialty: "Cirurgia & Implantodontia",
     },
   ];
@@ -64,13 +64,6 @@ export default function Team() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="relative mb-16 md:mb-24 px-4 md:px-0 overflow-visible">
-          {/* Background Shadow Text */}
-          <div className="absolute -top-12 -left-4 md:-top-24 md:-left-12 select-none pointer-events-none opacity-[0.03] z-0 overflow-hidden w-full">
-            <span className="text-9xl md:text-[220px] font-black uppercase tracking-tighter text-white italic leading-none block transform -skew-x-12 origin-left whitespace-nowrap">
-              Dentistas
-            </span>
-          </div>
-          
           <div className="relative z-10 text-left max-w-3xl">
             <h2 className="serif text-4xl sm:text-5xl md:text-7xl text-white mb-4 uppercase italic leading-tight text-left">
               Corpo <span className="text-brand-accent">Clínico.</span>
@@ -107,7 +100,7 @@ export default function Team() {
               </div>
               <div className="text-center px-4">
                 <h3 className="serif text-2xl text-white mb-2 leading-none uppercase font-bold">{member.name}</h3>
-                <p className="display text-[10px] font-bold tracking-[0.2em] text-brand-accent uppercase mb-3">{member.role}</p>
+                <p className="display text-[10px] font-bold tracking-[0.2em] text-brand-accent mb-3">{member.role}</p>
                 <div className="flex items-center justify-center gap-2 text-slate-500 text-[9px] font-bold tracking-[0.1em] uppercase italic">
                   <span className="w-3 h-px bg-white/10" />
                   <span>{member.specialty}</span>
@@ -145,7 +138,7 @@ export default function Team() {
                 </div>
                 <div>
                   <h4 className="serif text-2xl text-white mb-1 uppercase font-bold">{member.name}</h4>
-                  <p className="display text-[10px] font-bold tracking-widest text-brand-accent uppercase mb-2">{member.role}</p>
+                  <p className="display text-[10px] font-bold tracking-widest text-brand-accent mb-2">{member.role}</p>
                   <p className="text-slate-500 text-[10px] uppercase tracking-wider italic">{member.specialty}</p>
                 </div>
               </motion.div>
