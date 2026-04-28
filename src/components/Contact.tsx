@@ -30,9 +30,16 @@ export default function Contact() {
     const tel = formData.get('tel');
     const subject = formData.get('subject');
 
-    const mailtoUrl = `mailto:excelenciaodondologia8@gmail.com?subject=Pedido de Consulta - ${name}&body=Nome: ${name}%0D%0AEmail: ${email}%0D%0ATelefone: ${tel}%0D%0AAssunto: ${subject}`;
+    const message = `*Novo Pedido de Agendamento*\n\n` +
+                   `*Nome:* ${name}\n` +
+                   `*E-mail:* ${email}\n` +
+                   `*Telefone:* ${tel}\n` +
+                   `*Assunto:* ${subject}\n\n` +
+                   `Olá! Gostaria de agendar uma consulta.`;
     
-    window.location.href = mailtoUrl;
+    const whatsappUrl = `https://wa.me/5531999245130?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
