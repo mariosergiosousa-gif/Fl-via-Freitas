@@ -16,9 +16,9 @@ export default function Footer() {
           <div>
             <h4 className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase mb-10">Navegação</h4>
             <ul className="space-y-4">
-              <li><a href="#o-nosso-espaco" className="text-xs hover:text-white transition-colors uppercase tracking-widest">O Nosso Espaço</a></li>
               <li><a href="#tratamentos" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Tratamentos</a></li>
               <li><a href="#equipe" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Corpo Clínico</a></li>
+              <li><a href="#o-nosso-espaco" className="text-xs hover:text-white transition-colors uppercase tracking-widest">O Nosso Espaço</a></li>
               <li><a href="#onde-estamos" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Onde Estamos</a></li>
             </ul>
           </div>

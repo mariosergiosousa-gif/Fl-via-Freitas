@@ -106,8 +106,14 @@ export default function Navbar() {
                   <span>AGENDAR ESPECIALISTA</span>
                 </a>
                 <div className="flex justify-center space-x-8">
-                  <Instagram size={24} className="text-brand-ink/40 hover:text-brand-accent transition-colors" />
-                  <Facebook size={24} className="text-brand-ink/40 hover:text-brand-accent transition-colors" />
+                  <a 
+                    href="https://www.instagram.com/excelenciaemodontologia8/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-brand-accent transition-colors"
+                  >
+                    <Instagram size={24} className="text-brand-ink/40" />
+                  </a>
                 </div>
               </div>
             </div>
