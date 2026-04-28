@@ -38,7 +38,6 @@ export default function Footer({ onShowPrivacy }: FooterProps) {
                   Privacidade
                 </button>
               </li>
-              <li><a href="#" className="text-xs hover:text-white transition-colors uppercase tracking-widest">Termos</a></li>
             </ul>
           </div>
         </div>

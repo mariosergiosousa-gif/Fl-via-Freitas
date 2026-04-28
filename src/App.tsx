@@ -49,11 +49,11 @@ export default function App() {
         
         {/* Space Gallery - Clean Video Layout */}
         <section id="o-nosso-espaco" className="py-32 bg-[#050608] overflow-hidden border-t border-white/10">
-          <div className="max-w-7xl auto px-6 mb-16 text-left">
-            <h2 className="serif text-4xl md:text-7xl text-white italic mb-6 uppercase tracking-tighter leading-none">
+          <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
+            <h2 className="serif text-4xl md:text-7xl text-white italic mb-6 uppercase tracking-tighter leading-none text-left">
               A Excelência <br /> <span className="text-brand-accent">em Detalhes.</span>
             </h2>
-            <p className="text-sm md:text-lg text-slate-400 max-w-2xl mb-16 leading-relaxed font-light">
+            <p className="text-sm md:text-lg text-slate-400 max-w-2xl mx-auto mb-16 leading-relaxed font-light text-left lg:ml-0">
               Com uma equipe qualificada e ambiente acolhedor, oferecemos desde a prevenção até os tratamentos estéticos mais avançados.
             </p>
             
