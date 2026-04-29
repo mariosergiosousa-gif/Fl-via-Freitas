@@ -69,17 +69,19 @@ export default function Services() {
       <div className="absolute bottom-0 left-0 w-64 h-64 dots-pattern opacity-5 translate-y-1/2 -translate-x-1/2" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 md:mb-24 gap-8 text-center md:text-left">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-8 md:mb-12 gap-8 text-center md:text-left">
           <div className="max-w-2xl">
             <h2 className="serif text-4xl sm:text-5xl md:text-7xl text-white mb-6 uppercase italic leading-[1.1]">
               Excelência <br className="hidden md:block" />
               <span className="text-brand-accent">Personalizada.</span>
             </h2>
-            <p className="text-slate-400 text-base md:text-lg font-light leading-relaxed max-w-lg mx-auto md:mx-0">
+            <p className="text-slate-400 text-base md:text-lg font-light leading-relaxed max-w-lg mx-auto md:mx-0 mb-4">
               Combinamos arte, ciência e a tecnologia mais avançada para criar resultados que superam expectativas.
             </p>
           </div>
         </div>
+
+        <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase text-center py-6 bg-brand-accent/5 border-y border-white/5 mb-16">Tratamentos</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-white/10">
           {treatments.map((item, index) => (

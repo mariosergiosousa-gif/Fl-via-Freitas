@@ -60,7 +60,7 @@ export default function App() {
               Com uma equipe qualificada e ambiente acolhedor, oferecemos desde a prevenção até os tratamentos estéticos mais avançados.
             </p>
             
-            <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent mb-10 uppercase text-center">O Nosso Espaço</p>
+            <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase text-center py-6 bg-brand-accent/5 border-y border-white/5 mb-16">O Nosso Espaço</p>
             <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 px-4 mb-12">
               {[
                 "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777489462/Cl%C3%ADnica3_xv0qcs.jpg",
