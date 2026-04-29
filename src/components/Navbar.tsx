@@ -43,7 +43,7 @@ export default function Navbar() {
           </div>
         </a>
 
-        <div className="hidden md:flex items-center space-x-8 lg:space-x-12">
+        <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
           {navLinks.map((link) => (
             <a 
               key={link.name}
@@ -53,14 +53,15 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+          
           <a 
-            href="https://wa.me/5531999245130"
-            target="_blank"
+            href="https://www.instagram.com/excelenciaemodontologia8/" 
+            target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 bg-brand-accent text-black px-6 py-3 rounded-none text-[10px] font-bold tracking-[0.2em] hover:bg-white transition-colors"
+            className="w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-tr from-[#FFB320] via-[#FF268A] to-[#803CFF] text-white hover:scale-105 transition-transform shadow-lg shadow-black/20"
+            title="Siga-nos no Instagram"
           >
-            <Phone size={14} />
-            <span>AGENDAR</span>
+            <Instagram size={20} />
           </a>
         </div>
 
@@ -95,24 +96,14 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <div className="pt-8 border-t border-white/5 flex flex-col gap-6">
-                <a 
-                  href="https://wa.me/5531999245130"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center space-x-3 bg-brand-accent text-black px-8 py-5 rounded-none text-xs font-bold tracking-[0.2em] uppercase"
-                >
-                  <Phone size={18} />
-                  <span>AGENDAR ESPECIALISTA</span>
-                </a>
-                <div className="flex justify-center space-x-8">
+                <div className="flex justify-center">
                   <a 
                     href="https://www.instagram.com/excelenciaemodontologia8/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="hover:text-brand-accent transition-colors"
+                    className="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-[#FFB320] via-[#FF268A] to-[#803CFF] text-white shadow-xl"
                   >
-                    <Instagram size={24} className="text-brand-ink/40" />
+                    <Instagram size={28} />
                   </a>
                 </div>
               </div>

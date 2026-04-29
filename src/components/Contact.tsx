@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Clock, Instagram, Facebook, ArrowUpRight } from 'lucide-react';
+import { Mail, MapPin, Clock } from 'lucide-react';
 import { FormEvent, useState, ChangeEvent } from 'react';
 
 export default function Contact() {
@@ -72,22 +72,6 @@ export default function Contact() {
                   </a>
                 </div>
 
-                <div className="group cursor-pointer">
-                  <a 
-                    href="https://wa.me/553199245130" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block group"
-                  >
-                    <h4 className="display text-[10px] font-bold tracking-widest text-slate-500 mb-4 uppercase flex items-center justify-center gap-2 group-hover:text-brand-accent transition-colors">
-                      <Phone size={14} className="text-brand-accent" />
-                      WhatsApp
-                    </h4>
-                    <p className="serif text-xl md:text-2xl text-white leading-tight font-medium group-hover:text-brand-accent transition-colors">
-                      (31) 9924-5130
-                    </p>
-                  </a>
-                </div>
 
                 <div className="group cursor-pointer">
                   <h4 className="display text-[10px] font-bold tracking-widest text-slate-500 mb-4 uppercase flex items-center justify-center gap-2">
@@ -111,17 +95,6 @@ export default function Contact() {
                     </p>
                   </a>
                 </div>
-              </div>
-
-              <div className="mt-20 pt-12 border-t border-white/5 flex justify-center gap-6">
-                <a 
-                  href="https://www.instagram.com/excelenciaemodontologia8/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-none border border-white/10 flex items-center justify-center text-slate-400 hover:bg-brand-accent hover:border-brand-accent hover:text-black transition-all cursor-pointer"
-                >
-                  <Instagram size={20} />
-                </a>
               </div>
             </div>
           </div>
