@@ -3,9 +3,20 @@ import { ChevronDown } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-brand-paper pt-32 pb-24 md:py-24">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-24 md:py-24">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://res.cloudinary.com/di7rf0ubn/image/upload/v1777489462/Cl%C3%ADnica3_xv0qcs.jpg" 
+          alt="Clínica Excelência em Odontologia" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050608]/80 via-transparent to-[#050608]" />
+      </div>
+
       {/* Background Decor - Dots Pattern from Image 1 */}
-      <div className="absolute inset-0 dots-pattern opacity-10" />
+      <div className="absolute inset-0 dots-pattern opacity-10 z-[1]" />
       
       {/* Fluid Organic Shape in Background */}
       <div className="absolute top-[-20%] right-[-10%] w-[80%] h-[120%] bg-white/5 fluid-mask rotate-12 -z-0" />
