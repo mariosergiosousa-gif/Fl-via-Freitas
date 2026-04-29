@@ -78,7 +78,7 @@ export default function Contact() {
                     <Clock size={14} className="text-brand-accent" />
                     Horário
                   </h4>
-                  <p className="serif text-lg md:text-xl text-white leading-tight">
+                  <p className="serif text-xl md:text-2xl text-white leading-tight font-medium">
                     <span className="font-bold text-brand-accent">Seg - Sex:</span> 08:30 - 18:00 <br />
                     <span className="font-bold text-brand-accent">Sáb:</span> Sob Consulta
                   </p>
@@ -90,7 +90,7 @@ export default function Contact() {
                       <Mail size={14} className="text-brand-accent" />
                       E-mail
                     </h4>
-                    <p className="serif text-lg md:text-xl text-white leading-tight break-all font-light italic group-hover:text-brand-accent transition-colors">
+                    <p className="serif text-xl md:text-2xl text-white leading-tight break-all font-medium italic group-hover:text-brand-accent transition-colors">
                       excelenciaodondologia8@gmail.com
                     </p>
                   </a>
