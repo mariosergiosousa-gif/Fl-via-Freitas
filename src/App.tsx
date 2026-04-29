@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import VideoPlayer from './components/VideoPlayer';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import WhatsAppButton from './components/WhatsAppButton';
 import { AnimatePresence, motion } from 'motion/react';
 import { X } from 'lucide-react';
 
@@ -106,6 +107,7 @@ export default function App() {
         {showPrivacyPolicy && (
           <PrivacyPolicy onClose={() => setShowPrivacyPolicy(false)} />
         )}
+        <WhatsAppButton />
         {selectedImage && (
           <motion.div 
             initial={{ opacity: 0 }}
