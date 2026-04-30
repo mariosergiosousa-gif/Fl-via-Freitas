@@ -74,9 +74,9 @@ export default function Hero({ onOpenWhatsApp }: HeroProps) {
             {/* Main Image with Organic Shell - matches image 2 style */}
             <div className="aspect-[4/5] md:aspect-[4/5] overflow-hidden fluid-mask border-[1px] border-white/10 shadow-2xl relative bg-brand-muted max-w-sm mx-auto md:max-w-none">
               <img 
-                src="https://res.cloudinary.com/di7rf0ubn/image/upload/v1777500575/Cl%C3%ADnica7IA_arifzy.png" 
-                alt="Clínica Excelência em Odontologia" 
-                className="w-full h-full object-cover opacity-95 object-center"
+                src="https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_faces,w_800,h_1000,f_auto,q_auto/v1777573161/Fl%C3%A1via_e_Diana_wtywia.png" 
+                alt="Dra. Flávia e Dra. Diana" 
+                className="w-full h-full object-cover opacity-95"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
             </div>

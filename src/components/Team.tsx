@@ -23,7 +23,7 @@ export default function Team() {
     },
     {
       name: "Dra. Bruna Almeida",
-      role: "Especialista em Periodontia",
+      role: "Periodontia",
       image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_800,h_1000,f_auto,q_auto/v1777343737/Bruna_Almeida_jnejaj.png",
       specialty: "Periodontia",
     },
@@ -44,13 +44,13 @@ export default function Team() {
   const supportStaff = [
     {
       name: "Patrícia Natália",
-      role: "Auxiliar",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_600,h_600,f_auto,q_auto/v1776968503/Patr%C3%ADcia_Nat%C3%A1lia_qpwdmp.png",
+      role: "Auxiliar de saúde bucal",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_600,h_600,f_auto,q_auto/v1777572054/Patr%C3%ADcia_Nat%C3%A1lia_ekcf9w.png",
       specialty: "Apoio Clínico",
     },
     {
       name: "Sthefany Santos",
-      role: "Auxiliar",
+      role: "Auxiliar de saúde bucal",
       image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_600,h_600,f_auto,q_auto/v1777405872/Sthefanyy_Santos_s2qsb6.jpg",
       specialty: "Apoio clínico",
     },
@@ -63,7 +63,7 @@ export default function Team() {
     {
       name: "Lidiane Assis",
       role: "Secretária",
-      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_600,h_600,f_auto,q_auto/v1776968214/Lidiane_Assis_qcpvjn.png",
+      image: "https://res.cloudinary.com/di7rf0ubn/image/upload/c_fill,g_face,w_600,h_600,f_auto,q_auto/v1777572597/Lidiane_Assis_bpqaez.png",
       specialty: "Atendimento & Gestão",
     },
   ];
