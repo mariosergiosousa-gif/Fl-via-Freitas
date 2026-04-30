@@ -99,7 +99,7 @@ export default function Team() {
               transition={{ delay: index * 0.05 }}
               className="group"
             >
-              <div className="relative aspect-[3/4] overflow-hidden fluid-mask mb-6 shadow-2xl border border-white/10 mx-auto bg-gradient-to-br from-slate-900 to-black max-w-[280px] sm:max-w-none">
+              <div className="relative aspect-[3/4] overflow-hidden fluid-mask mb-6 shadow-2xl border-[3px] border-white/10 group-hover:border-brand-accent/30 transition-colors duration-300 mx-auto bg-gradient-to-br from-slate-900 to-black max-w-[280px] sm:max-w-none">
                 <img 
                   src={member.image} 
                   alt={member.name} 
@@ -140,7 +140,7 @@ export default function Team() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 bg-white/[0.02] p-6 sm:p-8 border border-white/5 group hover:border-brand-accent/30 transition-colors text-center sm:text-left"
+                className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 bg-white/[0.02] p-6 sm:p-8 border border-brand-accent/20 group hover:border-brand-accent/30 transition-colors text-center sm:text-left"
               >
                 <div className="w-24 h-24 sm:w-32 sm:h-32 shrink-0 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 fluid-mask sm:rounded-none">
                   <img 

@@ -40,7 +40,7 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
   return (
     <div 
       onClick={togglePlay}
-      className="relative aspect-[9/16] bg-brand-paper border border-white/10 overflow-hidden group shadow-2xl cursor-pointer"
+      className="relative aspect-[9/16] bg-brand-paper border-[3px] border-white/10 hover:border-brand-accent/30 transition-colors duration-300 overflow-hidden group shadow-2xl cursor-pointer"
     >
       <video 
         ref={videoRef}

@@ -12,12 +12,15 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import VideoPlayer from './components/VideoPlayer';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import CookiePolicy from './components/CookiePolicy';
+import CookieBanner from './components/CookieBanner';
 import WhatsAppButton from './components/WhatsAppButton';
 import { AnimatePresence, motion } from 'motion/react';
 import { X } from 'lucide-react';
 
 export default function App() {
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
+  const [showCookiePolicy, setShowCookiePolicy] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const marqueeItems = [
@@ -61,24 +64,25 @@ export default function App() {
             </p>
             
             <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase text-center py-6 bg-brand-accent/5 border-y border-white/5 mb-16">O Nosso Espaço</p>
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 px-4 mb-12">
+            <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-4 mb-12">
               {[
-                "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777489462/Cl%C3%ADnica3_xv0qcs.jpg",
+                "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777501359/Cl%C3%ADnica3_ebtr8b.jpg",
                 "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777489462/Cl%C3%ADnica1_humncs.jpg",
-                "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777489462/Cl%C3%ADnica2_y8wh9q.jpg"
+                "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777489462/Cl%C3%ADnica2_y8wh9q.jpg",
+                "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777499663/Cl%C3%ADnica4_u68yen.jpg"
               ].map((img, i) => (
                 <div 
                   key={i} 
-                  className="aspect-[4/5] md:aspect-square overflow-hidden border border-white/10 group relative cursor-pointer"
+                  className="aspect-[4/5] md:aspect-square overflow-hidden border-[3px] border-white/10 hover:border-brand-accent/30 transition-colors duration-300 group relative cursor-pointer"
                   onClick={() => setSelectedImage(img)}
                 >
                   <img 
                     src={img} 
                     alt={`Clínica Excelência ${i + 1}`}
-                    className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 display text-[10px] font-bold tracking-widest text-white uppercase bg-black/40 px-4 py-2 backdrop-blur-sm">
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 display text-[10px] font-bold tracking-widest text-white uppercase bg-brand-accent/80 px-4 py-2 backdrop-blur-sm">
                       Ver Foto
                     </span>
                   </div>
@@ -101,15 +105,23 @@ export default function App() {
 
         <Contact />
       </main>
-      <Footer onShowPrivacy={() => setShowPrivacyPolicy(true)} />
+      <Footer 
+        onShowPrivacy={() => setShowPrivacyPolicy(true)} 
+        onShowCookies={() => setShowCookiePolicy(true)}
+      />
 
       <AnimatePresence>
         {showPrivacyPolicy && (
-          <PrivacyPolicy onClose={() => setShowPrivacyPolicy(false)} />
+          <PrivacyPolicy key="privacy-policy-modal" onClose={() => setShowPrivacyPolicy(false)} />
         )}
+        {showCookiePolicy && (
+          <CookiePolicy key="cookie-policy-modal" onClose={() => setShowCookiePolicy(false)} />
+        )}
+        <CookieBanner />
         <WhatsAppButton />
         {selectedImage && (
           <motion.div 
+            key="image-zoom-modal"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -133,7 +145,7 @@ export default function App() {
               <img 
                 src={selectedImage} 
                 alt="Clínica Full View" 
-                className="w-full h-auto max-h-[85vh] object-contain border border-white/10 shadow-2xl"
+                className="w-full h-auto max-h-[85vh] object-contain border-4 border-brand-accent shadow-[0_0_50px_rgba(232,139,103,0.3)]"
               />
             </motion.div>
           </motion.div>

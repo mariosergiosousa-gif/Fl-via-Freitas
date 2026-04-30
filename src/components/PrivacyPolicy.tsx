@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 
 interface PrivacyPolicyProps {
   onClose: () => void;
+  key?: string;
 }
 
 export default function PrivacyPolicy({ onClose }: PrivacyPolicyProps) {
@@ -125,7 +126,7 @@ export default function PrivacyPolicy({ onClose }: PrivacyPolicyProps) {
 
         <div className="mt-24 pt-12 border-t border-white/5 text-center">
             <p className="display text-[10px] font-bold tracking-[0.4em] uppercase text-slate-600">
-                @ 2026 excelência em odontologia.
+                @ 2026 Excelência em Odontologia
             </p>
         </div>
       </div>

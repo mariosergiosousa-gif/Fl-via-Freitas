@@ -1,8 +1,9 @@
 interface FooterProps {
   onShowPrivacy: () => void;
+  onShowCookies: () => void;
 }
 
-export default function Footer({ onShowPrivacy }: FooterProps) {
+export default function Footer({ onShowPrivacy, onShowCookies }: FooterProps) {
   return (
     <footer className="py-24 bg-[#050608] text-slate-600 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
@@ -38,13 +39,21 @@ export default function Footer({ onShowPrivacy }: FooterProps) {
                   Privacidade
                 </button>
               </li>
+              <li>
+                <button 
+                  onClick={onShowCookies}
+                  className="text-xs hover:text-white transition-colors uppercase tracking-widest cursor-pointer text-left block w-full"
+                >
+                  Cookies
+                </button>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-slate-600">
-            @ 2026 excelência em odontologia. brumadinho,mg.
+            @ 2026 Excelência em Odontologia
           </p>
           <div className="flex gap-10">
             <a href="https://www.instagram.com/excelenciaemodontologia8/" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold tracking-[0.4em] uppercase hover:text-white transition-colors cursor-pointer">INSTAGRAM</a>

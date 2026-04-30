@@ -44,16 +44,16 @@ export default function Contact() {
 
   return (
     <section id="onde-estamos" className="py-24 md:py-32 bg-brand-paper relative border-t border-white/10">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="flex flex-col items-center">
+        <div className="max-w-7xl mx-auto px-6 text-left">
+          <div className="flex flex-col items-start">
             {/* Info */}
             <div className="w-full">
-              <h2 className="serif text-4xl md:text-6xl leading-[1.1] text-white mb-16 italic uppercase">
+              <h2 className="serif text-4xl md:text-7xl text-white italic mb-6 uppercase tracking-tighter leading-none">
                 Visite-nos em <br />
                 <span className="text-brand-accent not-italic font-bold">Brumadinho, MG.</span>
               </h2>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-x-16 sm:gap-y-16">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-x-16 sm:gap-y-16 text-center w-full mt-12 md:mt-20">
                 <div className="group cursor-pointer">
                   <a 
                     href="https://maps.app.goo.gl/TB6GvNZGQ5vmYYaP6" 

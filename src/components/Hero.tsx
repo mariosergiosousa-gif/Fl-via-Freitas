@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://res.cloudinary.com/di7rf0ubn/image/upload/v1777489462/Cl%C3%ADnica3_xv0qcs.jpg" 
+          src="https://res.cloudinary.com/di7rf0ubn/image/upload/v1777500809/Cl%C3%ADnica8IA_wv89jj.png" 
           alt="Clínica Excelência em Odontologia" 
           className="w-full h-full object-cover"
         />
@@ -67,10 +67,9 @@ export default function Hero() {
             {/* Main Image with Organic Shell - matches image 2 style */}
             <div className="aspect-[4/5] md:aspect-[4/5] overflow-hidden fluid-mask border-[1px] border-white/10 shadow-2xl relative bg-brand-muted max-w-sm mx-auto md:max-w-none">
               <img 
-                src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1974&auto=format&fit=crop" 
-                alt="Sorriso Perfeito" 
-                className="w-full h-full object-cover opacity-90"
-                referrerPolicy="no-referrer"
+                src="https://res.cloudinary.com/di7rf0ubn/image/upload/v1777500575/Cl%C3%ADnica7IA_arifzy.png" 
+                alt="Clínica Excelência em Odontologia" 
+                className="w-full h-full object-cover opacity-95 object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
             </div>
