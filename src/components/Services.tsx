@@ -125,7 +125,7 @@ export default function Services() {
                   <span className="w-8 h-[1px] bg-brand-accent/30 group-hover:bg-white transition-all group-hover:w-12" />
                 </button>
               ) : (
-                <a href="#contactos" className="text-[10px] font-bold tracking-[0.3em] text-brand-accent uppercase mt-auto flex items-center gap-2 hover:text-white transition-colors">
+                <a href="#onde-estamos" className="text-[10px] font-bold tracking-[0.3em] text-brand-accent uppercase mt-auto flex items-center gap-2 hover:text-white transition-colors">
                   <span>SAIBA MAIS</span>
                   <span className="w-8 h-[1px] bg-brand-accent/30 group-hover:bg-white transition-all group-hover:w-12" />
                 </a>

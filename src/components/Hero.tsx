@@ -7,7 +7,7 @@ interface HeroProps {
 
 export default function Hero({ onOpenWhatsApp }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-24 md:py-24">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-24 md:py-24">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 

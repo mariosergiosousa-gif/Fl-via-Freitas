@@ -33,17 +33,17 @@ export default function TreatmentDetailsModal({ isOpen, onClose, title, content 
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-accent/5 fluid-mask z-0 blur-3xl" />
             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-accent/5 fluid-mask z-0 blur-3xl opacity-50" />
             
-            <div className="relative z-10">
-              <div className="flex flex-col items-center text-center mb-10 relative">
-                <div className="w-full">
+            <div className="relative z-10 pt-4">
+              <div className="flex justify-between items-start mb-10 pt-8">
+                <div className="w-full text-center px-12">
                   <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase mb-4">Tratamento</p>
-                  <h2 className="serif text-4xl md:text-5xl text-white uppercase italic leading-tight">
+                  <h2 className="serif text-4xl md:text-5xl text-white uppercase italic leading-tight p-0 ml-[-37px]">
                     {title}
                   </h2>
                 </div>
                 <button 
                   onClick={onClose}
-                  className="absolute -top-2 -right-2 md:top-0 md:right-0 p-2 hover:bg-white/10 transition-all text-slate-500 hover:text-white group"
+                  className="absolute top-0 right-0 p-2 hover:bg-white/10 transition-all text-slate-500 hover:text-white group z-20"
                 >
                   <X size={24} className="group-hover:rotate-90 transition-transform duration-300" />
                 </button>
@@ -51,7 +51,7 @@ export default function TreatmentDetailsModal({ isOpen, onClose, title, content 
 
               <div className="flex flex-col items-center space-y-6">
                 <div className="w-12 h-[2px] bg-brand-accent/50" />
-                <p className="text-slate-300 text-base md:text-lg font-light leading-relaxed whitespace-pre-line text-justify">
+                <p className="text-slate-300 text-base md:text-lg font-light leading-relaxed whitespace-pre-line text-justify w-full">
                   {content}
                 </p>
               </div>
