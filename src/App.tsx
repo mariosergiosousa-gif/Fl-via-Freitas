@@ -15,12 +15,14 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import CookiePolicy from './components/CookiePolicy';
 import CookieBanner from './components/CookieBanner';
 import WhatsAppButton from './components/WhatsAppButton';
+import WhatsAppModal from './components/WhatsAppModal';
 import { AnimatePresence, motion } from 'motion/react';
 import { X } from 'lucide-react';
 
 export default function App() {
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
   const [showCookiePolicy, setShowCookiePolicy] = useState(false);
+  const [showWhatsAppModal, setShowWhatsAppModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const marqueeItems = [
@@ -36,7 +38,7 @@ export default function App() {
     <div className="min-h-screen text-slate-100 bg-[#050608]">
       <Navbar />
       <main>
-        <Hero />
+        <Hero onOpenWhatsApp={() => setShowWhatsAppModal(true)} />
         
         {/* Marquee Section */}
         <div className="py-6 bg-brand-accent/5 border-y border-white/5 overflow-hidden flex whitespace-nowrap">
@@ -118,6 +120,7 @@ export default function App() {
           <CookiePolicy key="cookie-policy-modal" onClose={() => setShowCookiePolicy(false)} />
         )}
         <CookieBanner />
+        <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
         <WhatsAppButton />
         {selectedImage && (
           <motion.div 

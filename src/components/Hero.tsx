@@ -1,7 +1,11 @@
 import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 
-export default function Hero() {
+interface HeroProps {
+  onOpenWhatsApp: () => void;
+}
+
+export default function Hero({ onOpenWhatsApp }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-24 md:py-24">
       {/* Background Image with Overlay */}
@@ -50,9 +54,12 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto"
           >
-            <a href="#onde-estamos" className="bg-brand-accent text-black px-12 py-5 rounded-none text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-xl text-center">
+            <button 
+              onClick={onOpenWhatsApp}
+              className="bg-brand-accent text-black px-12 py-5 rounded-none text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-xl text-center"
+            >
               Agende sua consulta
-            </a>
+            </button>
           </motion.div>
         </div>
 
