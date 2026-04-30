@@ -5,6 +5,7 @@ import { X, Send } from 'lucide-react';
 interface WhatsAppModalProps {
   isOpen: boolean;
   onClose: () => void;
+  key?: string;
 }
 
 export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {

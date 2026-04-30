@@ -44,7 +44,7 @@ export default function App() {
         <div className="py-6 bg-brand-accent/5 border-y border-white/5 overflow-hidden flex whitespace-nowrap">
           <div className="animate-marquee flex gap-12 items-center">
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
-              <span key={i} className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent/60 uppercase">
+              <span key={`marquee-${i}`} className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent/60 uppercase">
                 {item}
                 <span className="ml-12 text-white/10">•</span>
               </span>
@@ -74,7 +74,7 @@ export default function App() {
                 "https://res.cloudinary.com/di7rf0ubn/image/upload/v1777499663/Cl%C3%ADnica4_u68yen.jpg"
               ].map((img, i) => (
                 <div 
-                  key={i} 
+                  key={`gallery-img-${i}`} 
                   className="aspect-[4/5] md:aspect-square overflow-hidden border-[3px] border-white/10 hover:border-brand-accent/30 transition-colors duration-300 group relative cursor-pointer"
                   onClick={() => setSelectedImage(img)}
                 >
@@ -83,11 +83,6 @@ export default function App() {
                     alt={`Clínica Excelência ${i + 1}`}
                     className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 display text-[10px] font-bold tracking-widest text-white uppercase bg-brand-accent/80 px-4 py-2 backdrop-blur-sm">
-                      Ver Foto
-                    </span>
-                  </div>
                 </div>
               ))}
             </div>
@@ -99,7 +94,7 @@ export default function App() {
                 { title: "Conforto Premium", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1777341578/tour3_ythctn.mp4" },
                 { title: "Tecnologia Digital", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1777341579/tour2_nulnqy.mp4" }
               ].map((video, i) => (
-                <VideoPlayer key={i} src={video.src} title={video.title} />
+                <VideoPlayer key={`gallery-video-${i}`} src={video.src} title={video.title} />
               ))}
             </div>
           </div>
@@ -119,9 +114,9 @@ export default function App() {
         {showCookiePolicy && (
           <CookiePolicy key="cookie-policy-modal" onClose={() => setShowCookiePolicy(false)} />
         )}
-        <CookieBanner />
-        <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
-        <WhatsAppButton />
+        <CookieBanner key="cookie-banner-component" />
+        <WhatsAppModal key="whatsapp-modal-component" isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
+        <WhatsAppButton key="whatsapp-button-component" />
         {selectedImage && (
           <motion.div 
             key="image-zoom-modal"

@@ -92,7 +92,7 @@ export default function Team() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-8 lg:gap-10 mb-32 max-w-6xl mx-auto">
           {clinicalTeam.map((member, index) => (
             <motion.div
-              key={member.name}
+              key={`clinical-${index}-${member.name}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -107,11 +107,6 @@ export default function Team() {
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
-                <div className="absolute inset-0 bg-brand-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center p-4">
-                   <button className="bg-brand-accent text-black px-4 py-2 rounded-none text-[9px] font-bold tracking-widest flex items-center gap-2 hover:bg-white transition-all uppercase transform translate-y-4 group-hover:translate-y-0 duration-500 opacity-0 group-hover:opacity-100">
-                    Saber Mais <ExternalLink size={12} />
-                  </button>
-                </div>
               </div>
               <div className="text-center px-4">
                 <h3 className="serif text-2xl text-white mb-2 leading-none uppercase font-bold">{member.name}</h3>
@@ -135,7 +130,7 @@ export default function Team() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
             {supportStaff.map((member, index) => (
               <motion.div
-                key={member.name}
+                key={`support-${index}-${member.name}`}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { 
   Activity, 
@@ -12,53 +13,65 @@ import {
   CheckCircle2,
   Stethoscope
 } from 'lucide-react';
+import TreatmentDetailsModal from './TreatmentDetailsModal';
 
 export default function Services() {
+  const [selectedTreatment, setSelectedTreatment] = useState<{ title: string; content: string } | null>(null);
+
   const treatments = [
     {
       title: "Odontopediatria",
       description: "Cuidados gentis e especializados para o sorriso dos mais pequenos.",
       icon: <Baby size={32} />,
+      details: "A odontopediatria é a área da odontologia dedicada à saúde bucal infantil, desde os primeiros dentes de leite até a adolescência. O odontopediatra acompanha o crescimento, previne problemas, orienta hábitos saudáveis e garante que cada fase do desenvolvimento seja vivida com um sorriso saudável e confiante."
     },
     {
       title: "Ortodontia",
       description: "Correção e alinhamento do sorriso para todas as idades.",
       icon: <ShieldCheck size={32} />,
+      details: "A ortodontia é a especialidade da odontologia que corrige o posicionamento dos dentes e dos ossos maxilares. Além de melhorar a estética do sorriso, o tratamento ortodôntico contribui para uma mastigação saudável, facilita a higiene bucal e aumenta a autoestima. Um sorriso bem alinhado é muito mais do que beleza: é saúde e qualidade de vida."
     },
     {
       title: "Clínica Geral",
       description: "Prevenção e cuidados fundamentais para a saúde oral diária.",
       icon: <CheckCircle2 size={32} />,
+      details: "A clínica geral é a área da odontologia que cuida da prevenção, diagnóstico e tratamento dos problemas mais comuns da boca. É o primeiro passo para manter dentes e gengivas saudáveis, garantindo bem-estar e qualidade de vida. Consultas regulares com o dentista ajudam a evitar complicações e preservam o sorriso por muito mais tempo."
     },
     {
       title: "Implantodontia",
       description: "Soluções permanentes e seguras para a falta de dentes.",
       icon: <Layers size={32} />,
+      details: "A implantodontia é a especialidade da odontologia que devolve função e estética ao sorriso por meio de implantes dentários. Com técnicas modernas e seguras, é possível substituir dentes perdidos, restaurar a mastigação e trazer de volta a confiança ao paciente. Um implante bem planejado é mais do que um dente novo: é qualidade de vida."
     },
     {
       title: "HOF",
       description: "Equilíbrio estético e rejuvenescimento facial personalizado.",
       icon: <Sparkles size={32} />,
+      details: "A harmonização orofacial é um conjunto de procedimentos que busca realçar a beleza natural, corrigir pequenas assimetrias e proporcionar mais equilíbrio ao rosto. Além de melhorar a estética, contribui para uma autoestima e a confiança, sempre com foco na saúde e na naturalidade dos resultados."
     },
     {
       title: "Cirurgia e Traumatologia",
       description: "Intervenções buco-maxilo-faciais avançadas e precisão cirúrgica.",
       icon: <Activity size={32} />,
+      details: "A cirurgia e traumatologia bucomaxilofacial é a área da odontologia responsável pelo diagnóstico e tratamento de alterações, lesões e traumas na boca, face e maxilares. Com técnicas avançadas, o especialista atua em casos complexos, devolvendo função, estética e qualidade de vida ao paciente."
     },
     {
       title: "Prótese",
       description: "Restauração da função e estética com próteses de alta qualidade.",
       icon: <Shapes size={32} />,
+      details: "A prótese dentária é a especialidade que restaura dentes ausentes ou danificados, devolvendo a mastigação, a fala e a estética. Seja fixa, removível ou sobre implantes, a prótese proporciona conforto, confiança e qualidade de vida, permitindo que o paciente volte a sorrir sem limitações."
     },
     {
       title: "Periodontia",
       description: "Tratamento especializado das gengivas e tecidos de suporte.",
       icon: <Heart size={32} />,
+      details: "A periodontia é a especialidade da odontologia voltada para a prevenção, diagnóstico e tratamento das doenças que afetam a gengiva e os tecidos de suporte dos dentes. Manter a saúde periodontal é essencial para evitar problemas como gengivite e periodontite, garantindo dentes firmes, hálito saudável e um sorriso duradouro."
     },
     {
       title: "Endodontia",
       description: "Tratamentos de canal com precisão digital e mínimo desconforto.",
       icon: <Zap size={32} />,
+      details: "A endodontia é a especialidade da odontologia responsável pelo tratamento do canal dentário. Ela atua na prevenção e cura de inflamações e infecções da polpa do dente, permitindo que dentes comprometidos sejam preservados. Com técnicas modernas e seguras, o tratamento endodôntico devolve conforto, elimina a dor e mantém o sorriso saudável por muito mais tempo."
     },
   ];
 
@@ -86,7 +99,7 @@ export default function Services() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-white/10">
           {treatments.map((item, index) => (
             <motion.div
-              key={item.title}
+              key={`treatment-${index}-${item.title}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -99,20 +112,38 @@ export default function Services() {
               <h3 className="serif text-2xl md:text-3xl mb-4 text-white group-hover:text-brand-accent transition-colors uppercase font-medium">
                 {item.title}
               </h3>
-              <p className="text-slate-500 leading-relaxed mb-8 font-light italic text-sm md:text-base">
+              <p className="text-slate-500 leading-relaxed mb-8 font-normal italic text-sm md:text-base text-justify">
                 {item.description}
               </p>
-              <a href="#contactos" className="text-[10px] font-bold tracking-[0.3em] text-brand-accent uppercase mt-auto flex items-center gap-2 hover:text-white transition-colors">
-                <span>SAIBA MAIS</span>
-                <span className="w-8 h-[1px] bg-brand-accent/30 group-hover:bg-white transition-all group-hover:w-12" />
-              </a>
+              
+              {item.details ? (
+                <button 
+                  onClick={() => setSelectedTreatment({ title: item.title, content: item.details })}
+                  className="text-[10px] font-bold tracking-[0.3em] text-brand-accent uppercase mt-auto flex items-center gap-2 hover:text-white transition-colors cursor-pointer"
+                >
+                  <span>SAIBA MAIS</span>
+                  <span className="w-8 h-[1px] bg-brand-accent/30 group-hover:bg-white transition-all group-hover:w-12" />
+                </button>
+              ) : (
+                <a href="#contactos" className="text-[10px] font-bold tracking-[0.3em] text-brand-accent uppercase mt-auto flex items-center gap-2 hover:text-white transition-colors">
+                  <span>SAIBA MAIS</span>
+                  <span className="w-8 h-[1px] bg-brand-accent/30 group-hover:bg-white transition-all group-hover:w-12" />
+                </a>
+              )}
+              
               {/* Corner accent for group hover */}
               <div className="absolute top-0 right-0 w-2 h-2 bg-brand-accent/0 group-hover:bg-brand-accent transition-all duration-500" />
             </motion.div>
           ))}
         </div>
       </div>
-    </section>
 
+      <TreatmentDetailsModal 
+        isOpen={!!selectedTreatment}
+        onClose={() => setSelectedTreatment(null)}
+        title={selectedTreatment?.title || ''}
+        content={selectedTreatment?.content || ''}
+      />
+    </section>
   );
 }

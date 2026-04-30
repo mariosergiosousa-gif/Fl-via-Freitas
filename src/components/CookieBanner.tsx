@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Cookie, X } from 'lucide-react';
 
-export default function CookieBanner() {
+export default function CookieBanner({ key }: { key?: string }) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
