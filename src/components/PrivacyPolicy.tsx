@@ -3,7 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 
 interface PrivacyPolicyProps {
   onClose: () => void;
-  key?: string;
+  key?: string | number;
 }
 
 export default function PrivacyPolicy({ onClose }: PrivacyPolicyProps) {

@@ -114,9 +114,9 @@ export default function App() {
         {showCookiePolicy && (
           <CookiePolicy key="cookie-policy-modal" onClose={() => setShowCookiePolicy(false)} />
         )}
-        <CookieBanner key="cookie-banner-component" />
-        <WhatsAppModal key="whatsapp-modal-component" isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
-        <WhatsAppButton key="whatsapp-button-component" />
+        <CookieBanner key="cookie-banner-comp" />
+        <WhatsAppModal key="whatsapp-modal-comp" isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
+        <WhatsAppButton key="whatsapp-button-comp" />
         {selectedImage && (
           <motion.div 
             key="image-zoom-modal"

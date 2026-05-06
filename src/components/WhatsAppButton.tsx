@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-export default function WhatsAppButton({ key }: { key?: string }) {
+export default function WhatsAppButton() {
   const whatsappUrl = "https://wa.me/553199245130";
 
   return (

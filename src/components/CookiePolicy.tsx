@@ -3,7 +3,7 @@ import { ArrowLeft, Cookie } from 'lucide-react';
 
 interface CookiePolicyProps {
   onClose: () => void;
-  key?: string;
+  key?: string | number;
 }
 
 export default function CookiePolicy({ onClose }: CookiePolicyProps) {

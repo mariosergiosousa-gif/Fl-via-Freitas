@@ -1,5 +1,5 @@
-import { Play, Pause } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
+import { useRef, useState, useEffect, MouseEvent } from 'react';
 
 interface VideoPlayerProps {
   src: string;
@@ -9,9 +9,11 @@ interface VideoPlayerProps {
 
 export default function VideoPlayer({ src, title }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
 
-  const togglePlay = () => {
+  const togglePlay = (e: MouseEvent) => {
+    e.stopPropagation();
     if (videoRef.current) {
       if (isPlaying) {
         videoRef.current.pause();
@@ -19,6 +21,14 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
         videoRef.current.play();
       }
       setIsPlaying(!isPlaying);
+    }
+  };
+
+  const toggleMute = (e: MouseEvent) => {
+    e.stopPropagation();
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
     }
   };
 
@@ -47,6 +57,8 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
         src={getAssetUrl(src)} 
         className={`w-full h-full object-cover transition-all duration-700 ${isPlaying ? '' : 'grayscale group-hover:grayscale-0'}`}
         loop 
+        muted={isMuted}
+        autoPlay
         playsInline
         preload="metadata"
         onError={(e) => {
@@ -73,6 +85,17 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
             <Play className="text-white ml-1 opacity-60 group-hover:opacity-100 transition-opacity" size={24} fill="currentColor" />
           )}
         </div>
+      </div>
+
+      {/* Controls Overlay */}
+      <div className="absolute top-4 right-4 z-20 flex flex-col gap-3">
+        <button 
+          onClick={toggleMute}
+          className="w-10 h-10 rounded-full bg-black/30 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-brand-accent/40 transition-all"
+          title={isMuted ? "Ativar som" : "Desativar som"}
+        >
+          {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+        </button>
       </div>
 
       {/* Label */}
