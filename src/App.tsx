@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -24,6 +24,18 @@ export default function App() {
   const [showCookiePolicy, setShowCookiePolicy] = useState(false);
   const [showWhatsAppModal, setShowWhatsAppModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const titleText = "Excelência em Odontologia | Clínica Dentária em Brumadinho   ";
+    let index = 0;
+
+    const interval = setInterval(() => {
+      document.title = titleText.substring(index) + titleText.substring(0, index);
+      index = (index + 1) % titleText.length;
+    }, 250);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const marqueeItems = [
     "TECNOLOGIA DE PONTA",
