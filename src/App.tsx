@@ -26,7 +26,7 @@ export default function App() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
-    const titleText = "Excelência em Odontologia | Clínica Dentária em Brumadinho   ";
+    const titleText = "Excelência em Odontologia | Clínica Dentária em Brumadinho, MG |   ";
     let index = 0;
 
     const interval = setInterval(() => {
