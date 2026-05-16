@@ -38,19 +38,20 @@ Os arquivos gerados estarão na pasta `dist/`.
 
 ### Publicação no GitHub Pages
 
-Este projeto já inclui um workflow do GitHub Actions (`.github/workflows/deploy.yml`) que automatiza o deploy para o GitHub Pages sempre que você fizer um push para a branch `main`.
+Este projeto já inclui um workflow do GitHub Actions (`.github/workflows/deploy.yml`) que automatiza o deploy para o GitHub Pages.
 
-**Passos importantes no GitHub:**
+### ⚠️ Passo Obrigatório no GitHub (O site não funcionará sem isso):
+
+O erro `HttpError: Not Found` acontece porque o GitHub vem configurado por padrão para usar branches em vez de Actions. Siga estes 3 passos:
 
 1. Vá para o seu repositório no GitHub.
-2. Clique em **Settings** (Configurações) > **Pages**.
-3. Em **Build and deployment** > **Source**, selecione **GitHub Actions**.
-4. Faça um push de qualquer alteração para a branch `main` e o deploy começará automaticamente.
+2. Clique em **Settings** (Configurações) no topo.
+3. No lado esquerdo, clique em **Pages**.
+4. Abaixo de **Build and deployment**, mude a opção **Source** de "Deploy from a branch" para **"GitHub Actions"**.
 
-**Vídeos e subdiretórios:**
-Se o seu site estiver em um subdiretório (ex: `https://seu-usuario.github.io/nome-do-repositorio/`), o projeto está configurado com `base: './'` no `vite.config.ts`, o que deve funcionar para a maioria dos casos. Se encontrar problemas com rotas, ajuste o `base` para o nome do repositório.
+Após fazer isso, o deploy será feito automaticamente em todos os novos envios (push).
 
-## 🛠️ Tecnologias Utilizadas
+### 🛠️ Tecnologias Utilizadas
 
 - **React 19**
 - **Vite 6**
