@@ -101,6 +101,10 @@ export default function App() {
 
             <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
               {[
+                { title: "Sorriso dos Sonhos", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1778941125/Seu_sorriso_de_sonho_ggxeub.mp4" },
+                { title: "Bem-estar", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1778941103/Preven%C3%A7%C3%A3o_sa%C3%BAde_est%C3%A9tica_autoestima_e_bem-estar_gfnhtn.mp4" },
+                { title: "Cuidado Essencial", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1778940930/Palito_de_dente_n%C3%A3o_%C3%A9_de_dente_%C3%A9_de_madeira_rsm43f.mp4" },
+                { title: "Canal Seguro", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1778940836/Tratamento_de_canal_%C3%A9_seguro._mg6rjs.mp4" },
                 { title: "Experiência Única", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1777341579/tour4_k1v9ai.mp4" },
                 { title: "Design Moderno", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1777341579/tour1_md6yyu.mp4" },
                 { title: "Conforto Premium", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1777341578/tour3_ythctn.mp4" },
