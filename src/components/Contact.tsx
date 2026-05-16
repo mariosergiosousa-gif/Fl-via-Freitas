@@ -66,8 +66,8 @@ export default function Contact() {
                       Endereço
                     </h4>
                     <p className="serif text-xl md:text-2xl text-white leading-tight font-medium group-hover:text-brand-accent transition-colors">
-                      Rua Barão do Rio Branco, 83, <br />
-                      Centro, Brumadinho - MG
+                      Rua Barão do Rio Branco, 83 - Centro, <br />
+                      Brumadinho - MG, 32480-032, Brasil
                     </p>
                   </a>
                 </div>
