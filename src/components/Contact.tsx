@@ -54,38 +54,19 @@ export default function Contact() {
               </h2>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-x-16 sm:gap-y-16 text-center w-full mt-12 md:mt-20">
-                <div className="group cursor-pointer">
-                  <a 
-                    href="https://maps.app.goo.gl/TB6GvNZGQ5vmYYaP6" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block group"
-                  >
-                    <h4 className="display text-[10px] font-bold tracking-widest text-slate-500 mb-4 uppercase flex items-center justify-center gap-2 group-hover:text-brand-accent transition-colors">
-                      <MapPin size={14} className="text-brand-accent" />
-                      Endereço
+                <div className="group cursor-pointer flex flex-col items-center">
+                  <div className="w-full">
+                    <h4 className="display text-[10px] font-bold tracking-widest text-slate-500 mb-4 uppercase flex items-center justify-center gap-2">
+                      <Clock size={14} className="text-brand-accent" />
+                      Horário
                     </h4>
-                    <p className="serif text-xl md:text-2xl text-white leading-tight font-medium group-hover:text-brand-accent transition-colors">
-                      Rua Barão do Rio Branco, 83 - Centro, <br />
-                      Brumadinho - MG, 32480-032, Brasil
+                    <p className="serif text-xl md:text-2xl text-white leading-tight font-medium mb-12">
+                      <span className="font-bold text-brand-accent">Seg - Sex:</span> 08:30 - 18:00 <br />
+                      <span className="font-bold text-brand-accent">Sáb:</span> Sob Consulta
                     </p>
-                  </a>
-                </div>
+                  </div>
 
-
-                <div className="group cursor-pointer">
-                  <h4 className="display text-[10px] font-bold tracking-widest text-slate-500 mb-4 uppercase flex items-center justify-center gap-2">
-                    <Clock size={14} className="text-brand-accent" />
-                    Horário
-                  </h4>
-                  <p className="serif text-xl md:text-2xl text-white leading-tight font-medium">
-                    <span className="font-bold text-brand-accent">Seg - Sex:</span> 08:30 - 18:00 <br />
-                    <span className="font-bold text-brand-accent">Sáb:</span> Sob Consulta
-                  </p>
-                </div>
-
-                <div className="group cursor-pointer">
-                  <a href="mailto:excelenciaodondologia8@gmail.com" className="block group">
+                  <a href="mailto:excelenciaodondologia8@gmail.com" className="block group w-full">
                     <h4 className="display text-[10px] font-bold tracking-widest text-slate-500 mb-4 uppercase flex items-center justify-center gap-2 group-hover:text-brand-accent transition-colors">
                       <Mail size={14} className="text-brand-accent" />
                       E-mail
@@ -94,6 +75,38 @@ export default function Contact() {
                       excelenciaodondologia8@gmail.com
                     </p>
                   </a>
+                </div>
+
+                <div className="group cursor-pointer">
+                  <a 
+                    href="https://maps.app.goo.gl/GpQXkE8BpQ39dj8y7" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block group"
+                  >
+                    <h4 className="display text-[10px] font-bold tracking-widest text-slate-500 mb-4 uppercase flex items-center justify-center gap-2 group-hover:text-brand-accent transition-colors">
+                      <MapPin size={14} className="text-brand-accent" />
+                      Endereço
+                    </h4>
+                    <p className="serif text-xl md:text-2xl text-white leading-tight font-medium group-hover:text-brand-accent transition-colors mb-6">
+                      Rua Barão do Rio Branco, 83 - Centro, <br />
+                      Brumadinho - MG, 32480-032, Brasil
+                    </p>
+                  </a>
+
+                  <div className="mt-2 rounded-2xl overflow-hidden border border-white/10 shadow-2xl h-44 w-full max-w-sm mx-auto">
+                    <iframe
+                      title="Mapa de Localização"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.385966348737!2d-44.20248572398539!3d-20.142767699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6cd3d2e62699b%3A0x6085d6045d80054!2sExcel%C3%AAncia%20em%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1716000000000!5m2!1spt-BR!2sbr"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0, filter: "grayscale(0.6) invert(0.9) contrast(1.1) brightness(0.9)" }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="opacity-90 hover:opacity-100 transition-opacity duration-300"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
