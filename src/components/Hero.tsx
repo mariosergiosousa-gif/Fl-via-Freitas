@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, MapPin } from 'lucide-react';
 
 interface HeroProps {
   onOpenWhatsApp: () => void;
@@ -12,7 +12,7 @@ export default function Hero({ onOpenWhatsApp }: HeroProps) {
       <div className="absolute inset-0 z-0">
         <img 
           src="https://res.cloudinary.com/di7rf0ubn/image/upload/v1777500809/Cl%C3%ADnica8IA_wv89jj.png" 
-          alt="Clínica Excelência em Odontologia" 
+          alt="Clínica Excelência em Odontologia em Brumadinho" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/70" />
@@ -28,6 +28,17 @@ export default function Hero({ onOpenWhatsApp }: HeroProps) {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center w-full relative z-10">
         {/* Left Content */}
         <div className="md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left translate-y-0 md:translate-y-[-20px]">
+          {/* Local SEO Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-brand-accent/15 border border-brand-accent/40 rounded-full text-brand-accent text-xs font-semibold uppercase tracking-wider mb-6"
+          >
+            <MapPin size={14} className="animate-pulse" />
+            <span>Dentista em Brumadinho • MG</span>
+          </motion.div>
+
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,7 +56,7 @@ export default function Hero({ onOpenWhatsApp }: HeroProps) {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-sm md:text-base text-slate-300 max-w-sm md:max-w-lg mb-10 md:mb-12 leading-relaxed font-light text-center md:text-left mx-auto md:mx-0"
           >
-            Na Excelência em Odontologia, cada sorriso conta uma história. Nossa missão é cuidar da saúde bucal e elevar a autoestima com tecnologia de ponta e atendimento personalizado.
+            Sua clínica de referência para dentista em Brumadinho - MG. Cuidamos da sua saúde bucal e estética com tecnologia avançada, corpo clínico especializado e atendimento humanizado.
           </motion.p>
           
           <motion.div 
@@ -58,7 +69,7 @@ export default function Hero({ onOpenWhatsApp }: HeroProps) {
               onClick={onOpenWhatsApp}
               className="bg-brand-accent text-black px-12 py-5 rounded-none text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-xl text-center"
             >
-              Agende sua consulta
+              Agender consulta no WhatsApp
             </button>
           </motion.div>
         </div>
