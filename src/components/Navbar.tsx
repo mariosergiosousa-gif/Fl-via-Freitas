@@ -58,8 +58,12 @@ export default function Navbar() {
             href="https://www.instagram.com/excelenciaemodontologia8/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-tr from-[#FFB320] via-[#FF268A] to-[#803CFF] text-white hover:scale-105 transition-transform shadow-lg shadow-black/20"
-            title="Siga-nos no Instagram"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open("https://www.instagram.com/excelenciaemodontologia8/", "_blank", "noopener,noreferrer");
+            }}
+            className="w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-tr from-[#FFB320] via-[#FF268A] to-[#803CFF] text-white hover:scale-105 transition-transform shadow-lg shadow-black/20 cursor-pointer"
+            title="Siga-nos no Instagram (@excelenciaemodontologia8)"
           >
             <Instagram size={20} />
           </a>
@@ -102,7 +106,12 @@ export default function Navbar() {
                     href="https://www.instagram.com/excelenciaemodontologia8/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-[#FFB320] via-[#FF268A] to-[#803CFF] text-white shadow-xl"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open("https://www.instagram.com/excelenciaemodontologia8/", "_blank", "noopener,noreferrer");
+                    }}
+                    className="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-[#FFB320] via-[#FF268A] to-[#803CFF] text-white shadow-xl cursor-pointer"
+                    title="Siga-nos no Instagram (@excelenciaemodontologia8)"
                   >
                     <Instagram size={28} />
                   </a>

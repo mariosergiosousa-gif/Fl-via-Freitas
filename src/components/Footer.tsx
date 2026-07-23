@@ -56,7 +56,18 @@ export default function Footer({ onShowPrivacy, onShowCookies }: FooterProps) {
             @ 2026 Excelência em Odontologia
           </p>
           <div className="flex gap-10">
-            <a href="https://www.instagram.com/excelenciaemodontologia8/" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold tracking-[0.4em] uppercase hover:text-white transition-colors cursor-pointer">INSTAGRAM</a>
+            <a 
+              href="https://www.instagram.com/excelenciaemodontologia8/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              onClick={(e) => {
+                e.preventDefault();
+                window.open("https://www.instagram.com/excelenciaemodontologia8/", "_blank", "noopener,noreferrer");
+              }}
+              className="text-[10px] font-bold tracking-[0.4em] uppercase hover:text-white transition-colors cursor-pointer"
+            >
+              INSTAGRAM
+            </a>
             <a href="https://wa.me/5531999245130" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold tracking-[0.4em] uppercase hover:text-white transition-colors cursor-pointer">WHATSAPP</a>
             <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-accent">EXCELÊNCIA</span>
           </div>
