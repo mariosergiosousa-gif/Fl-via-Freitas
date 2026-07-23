@@ -66,32 +66,13 @@ export default function Contact() {
                     </p>
                   </div>
 
-                  <a href="mailto:excelenciaodondologia8@gmail.com" className="block group w-full mb-8">
+                  <a href="mailto:excelenciaodondologia8@gmail.com" className="block group w-full">
                     <h4 className="display text-[10px] font-bold tracking-widest text-slate-500 mb-4 uppercase flex items-center justify-center gap-2 group-hover:text-brand-accent transition-colors">
                       <Mail size={14} className="text-brand-accent" />
                       E-mail
                     </h4>
                     <p className="serif text-xl md:text-2xl text-white leading-tight break-all font-medium italic group-hover:text-brand-accent transition-colors">
                       excelenciaodondologia8@gmail.com
-                    </p>
-                  </a>
-
-                  <a 
-                    href="https://www.instagram.com/excelenciaemodontologia8/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.open("https://www.instagram.com/excelenciaemodontologia8/", "_blank", "noopener,noreferrer");
-                    }}
-                    className="block group w-full"
-                  >
-                    <h4 className="display text-[10px] font-bold tracking-widest text-slate-500 mb-4 uppercase flex items-center justify-center gap-2 group-hover:text-brand-accent transition-colors">
-                      <Instagram size={14} className="text-brand-accent" />
-                      Instagram
-                    </h4>
-                    <p className="serif text-xl md:text-2xl text-white leading-tight font-medium italic group-hover:text-brand-accent transition-colors">
-                      @excelenciaemodontologia8
                     </p>
                   </a>
                 </div>
