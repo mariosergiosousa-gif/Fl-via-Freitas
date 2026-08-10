@@ -99,6 +99,8 @@ export default function App() {
               ))}
             </div>
 
+            <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase text-center py-6 bg-brand-accent/5 border-y border-white/5 mb-12 mt-16 mx-[200px]">Dicas e Conteúdo Rápido</p>
+
             <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
               {[
                 { title: "Sorriso dos Sonhos", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1778941125/Seu_sorriso_de_sonho_ggxeub.mp4" },
