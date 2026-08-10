@@ -99,10 +99,14 @@ export default function App() {
               ))}
             </div>
 
-            <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase text-center py-6 bg-brand-accent/5 border-y border-white/5 mb-12 mt-16 mx-[200px]">Dicas e Conteúdo Rápido</p>
+            <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase text-center py-6 bg-brand-accent/5 border-y border-white/5 mb-12 mt-16 mx-[200px]">Dicas E Curiosidades</p>
 
             <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
               {[
+                { title: "Dica de Saúde", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1786387338/SnapInsta.to_AQPUhi5JVE1QRxixuoghyu-pnS5hfqla0AyIjo9db2R5UvO0vj6oiIww8uYmoftT6g8plUWnepcASUQS7dwfBKxQOwYgcp87aK3KUZ8_vklgex.mp4" },
+                { title: "Dica Prática", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1786387339/SnapInsta.to_AQO1SJsV4TtT8MDJbOKJovFIfxUkLUFpWUkXkJZTss-NZ-cJmQO1U07zlKzGyWHk3vmwO8FQfXF4hLt6kgDvaLwMSTbS8GLD8wDaQM4_webosr.mp4" },
+                { title: "Prevenção Diária", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1786387339/SnapInsta.to_AQP-Nuyq8RNL3otVxPJP7N05y17QwlWp9WA6gOwmBxooXbszYePY4_AL53KPI-WzL9zr3KjPQLIawCKvyPLgZI0Q5znUV6Dxo2GEYa4_whgmio.mp4" },
+                { title: "Cuidados Especiais", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1786387339/SnapInsta.to_AQPM_lDzLCaaR7CeYJT4uXu1EmaYsWWV83-Y55YAqa-VAf2pdnPmyPstBEfvoX6OGCF_yF53PSL0b317tmkQhEO-hRCCt7S8qpSRXiM_zpmedd.mp4" },
                 { title: "Sorriso dos Sonhos", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1778941125/Seu_sorriso_de_sonho_ggxeub.mp4" },
                 { title: "Bem-estar", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1778941103/Preven%C3%A7%C3%A3o_sa%C3%BAde_est%C3%A9tica_autoestima_e_bem-estar_gfnhtn.mp4" },
                 { title: "Cuidado Essencial", src: "https://res.cloudinary.com/di7rf0ubn/video/upload/v1778940930/Palito_de_dente_n%C3%A3o_%C3%A9_de_dente_%C3%A9_de_madeira_rsm43f.mp4" },
