@@ -69,11 +69,11 @@ export default function App() {
         
         {/* Space Gallery - Clean Video Layout */}
         <section id="o-nosso-espaco" className="py-32 bg-[#050608] overflow-hidden border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-6 mb-16 text-left">
+          <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
             <h2 className="serif text-4xl md:text-7xl text-white italic mb-6 uppercase tracking-tighter leading-none">
               A Excelência <br /> <span className="text-brand-accent">em Detalhes.</span>
             </h2>
-            <p className="text-sm md:text-lg text-slate-400 max-w-2xl mb-16 leading-relaxed font-light">
+            <p className="text-sm md:text-lg text-slate-400 max-w-2xl mx-auto mb-16 leading-relaxed font-light">
               Com uma equipe qualificada e ambiente acolhedor, oferecemos desde a prevenção até os tratamentos estéticos mais avançados.
             </p>
             
@@ -99,7 +99,7 @@ export default function App() {
               ))}
             </div>
 
-            <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase text-center py-6 bg-brand-accent/5 border-y border-white/5 mb-12 mt-16 mx-[200px]">Dicas E Curiosidades</p>
+            <p className="display text-[10px] font-bold tracking-[0.4em] text-brand-accent uppercase text-center py-6 bg-brand-accent/5 border-y border-white/5 mb-12 mt-16 max-w-4xl mx-auto">Dicas E Curiosidades</p>
 
             <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
               {[
