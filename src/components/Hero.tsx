@@ -58,7 +58,7 @@ export default function Hero({ onOpenWhatsApp }: HeroProps) {
               onClick={onOpenWhatsApp}
               className="bg-brand-accent text-black px-12 py-5 rounded-none text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-xl text-center"
             >
-              Agender consulta no WhatsApp
+              Agendar consulta no WhatsApp
             </button>
           </motion.div>
         </div>
